@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <link href="font/css/all.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Scope+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@200;300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css.map">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>JGilbert Dev</title>
+  </head>
+  <body>
+    <noscript>
+      <div class="App">
+      <div class="Navbar">
+        <p class="Logo">JG</p>
+
+        <div class="Pages">
+
+          <div class="moveright">
+            <ul>
+              <p>Enable JS</p>
+              <!-- <li><a href="#" target="_blank" rel="noopener noreferrer">Main</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">About</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Resume</a></li>
+              <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li> -->
+            </ul>
+          </div>
+        </div>
+
+        <div>
+          <input type="checkbox" class="toggler" onChange={handleCheck} />
+          <div class="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </div>
+
+      </div>
+      <div class="js-warning">
+        <p><i class="fas fa-exclamation-circle"></i> This site works best with Javascript enabled. Please enable Javascript for full functionality.</p>
+        <div class="X">
+          <input type="checkbox" class="xbox" />
+          <div class="centerme">
+            <div class="line1"></div>
+            <div class="line2"></div>
+          </div>
+        </div>
+
+      </div>
+      
+
+
+      <div class="menu" style={menuStyle}>
+        <ul>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Main</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">About</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Portfolio</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Resume</a></li>
+          <li><a href="#" target="_blank" rel="noopener noreferrer">Contact</a></li>
+        </ul>
+      </div>
+
+
+      <div class="main">
+
+        <div class="banner">
+          <div class="cover">
+            <h1 class="Title">Explore   Achieve   Surpass</h1>
+            <h2 class="Title2">
+              Hire a developer skilled in <span>AI, web development, </span> 
+              and <span>scientific research</span>
+            </h2>
+          </div>
+        </div>
+
+        <div class="ai-bloc">
+          <div class="content Title">
+            <p>
+              Experienced with <span>Natural Language Processing, Image Classification</span>, and <span>Tabular Data</span> analysis, 
+              I have developed deep learning models and optimizers in <span>Pytorch</span> and <span>Tensorflow</span>.
+            </p>
+            <p>
+              I am familiar with <span>Python’s</span> ecosystem and its computational limitations. 
+              I have used both <span>Cython</span> and <span>Numba</span> to achieve performance boosts when 
+              the code could not run on the <span>GPU</span> or be vectorized with <span>Numpy</span>.
+            </p>
+          </div>
+        </div>
+
+        <div class="js-bloc">
+          <div class="content Title">
+            <div class="">
+              <div class="">
+
+                <p>
+                  I am familiar with both <span>OOP</span> and <span>functional programming</span>, 
+                  and can adapt my programming style to meet your company’s needs.
+                </p>
+                <span class="lighter"> <i class="fab fa-react fa-2x"></i></span>
+                <p>
+                  I have done projects in the frontend with <span>React</span>, 
+                  and in the backend with <span>Express</span> and <span>Django</span>.
+                </p>
+
+              </div>
+            </div>
+
+
+
+          </div>
+        </div>
+
+        <div class="c-bloc">
+          <div class="content Title">
+            <p>
+              I have modified and compiled a <span>Linux kernel</span>.
+              I can use <span>C</span> when performance is critical.
+            </p>
+            <p>
+              I have also experimented with a variety of 
+              languages such as <span>Clojure, Haskell, Julia,</span> and <span>Go</span>. 
+              I am willing to learn new tech if it’s right for the job.
+            </p>
+            <p>
+              Let’s get work done.
+            </p>
+          </div>
+        </div>
+
+        <div class="contact-bloc">
+          <div class="card">
+            <h1>
+              Contact
+            </h1>
+            <p>
+              <i class="far fa-envelope"></i>
+            </p>
+            <input type="text" name="name" id="contact-name" placeholder="Your Name" />
+            <input type="email" name="email" id="contact-email" placeholder="Your Email" />
+            <textarea name="contact-message" id="contact-message" placeholder="Message"></textarea>
+            <button class="btn draw-border" type="submit">Submit</button>
+          </div>
+        </div>
+
+        <div class="BottomNav">
+          <i class="fas fa-home fa-2x"></i>
+          <i class="fas fa-address-card fa-2x"></i>
+          <i class="fas fa-folder-open fa-2x"></i>
+          <i class="fas fa-file-alt fa-2x"></i>
+          <i class="fas fa-envelope fa-2x"></i>
+        </div>
+
+      </div>
+    </div>
+    </noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
+</html>
