@@ -2,7 +2,7 @@ import React from 'react';
 import './App.scss';
 
 
-import {motion} from "framer-motion"
+import { motion, AnimatePresence } from "framer-motion"
 import NavMenu from './components/NavMenu';
 import Main from './components/main/Main';
 import About from './components/about/About';
@@ -28,15 +28,16 @@ function App() {
     <Router>
     <div className="App">
       <NavMenu />
-      <Switch>
-        <Route path="/" exact component={Main} />
-        <Route path="/about" exact component={About} />
-        <Route path="/portfolio" exact component={Portfolio} />
-        <Route path="/resume" exact component={Resume} />
-        <Route path="/contact" exact component={Contact} />
-        <Route path="/" component={Page404} />
-      </Switch>
-
+      <AnimatePresence exitBeforeEnter >
+        <Switch>
+          <Route path="/" exact component={Main} />
+          <Route path="/about" exact component={About} />
+          <Route path="/portfolio" exact component={Portfolio} />
+          <Route path="/resume" exact component={Resume} />
+          <Route path="/contact" exact component={Contact} />
+          <Route path="/" component={Page404} />
+        </Switch>
+      </AnimatePresence>
       
     </div>
     </Router>

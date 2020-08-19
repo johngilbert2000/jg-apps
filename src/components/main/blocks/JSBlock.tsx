@@ -1,8 +1,25 @@
 import React from 'react';
+import {motion} from 'framer-motion';
 
 const JSBlock: React.FunctionComponent = () => {
+    const coverInit = {
+      // opacity: 0.5,
+      y: -400
+    }
+    const coverFinal = {
+      opacity: 1,
+      y: 0
+    }
+    const trans = {
+      type: "spring",
+      duration: 4,
+
+    }
+
+
+
     return(
-        <div className="js-bloc">
+        <motion.div className="js-bloc" initial={coverInit} animate={coverFinal} transition={trans}>
           <div className="content Title">
             <div className="">
               <div className="">
@@ -22,7 +39,7 @@ const JSBlock: React.FunctionComponent = () => {
             </div>
 
           </div>
-        </div>
+        </motion.div>
     );
 }
 

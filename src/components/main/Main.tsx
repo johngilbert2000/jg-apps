@@ -6,7 +6,6 @@ import PythonBlock from './blocks/PythonBlock';
 import JSBlock from './blocks/JSBlock';
 
 const Main: React.FunctionComponent = () => {
-    console.log("Main page");
     return(
         <div className="main">
             <Banner />

@@ -6,7 +6,6 @@ import PythonBlock from '../main/blocks/PythonBlock';
 import JSBlock from '../main/blocks/JSBlock';
 
 const Contact: React.FunctionComponent = () => {
-    console.log("Contact page");
     return(
         <div className="main">
 
