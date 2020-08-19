@@ -1,5 +1,7 @@
 import React from 'react';
 import {motion} from 'framer-motion';
+// import Fade from 'react-reveal/Fade';
+import { Fade } from "react-awesome-reveal";
 
 const JSBlock: React.FunctionComponent = () => {
     const coverInit = {
@@ -17,12 +19,13 @@ const JSBlock: React.FunctionComponent = () => {
     }
 
 
-
     return(
         <motion.div className="js-bloc" initial={coverInit} animate={coverFinal} transition={trans}>
           <div className="content Title">
             <div className="">
+
               <div className="">
+                <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
 
                 <p>
                   I am familiar with both <span>Object-Oriented Programming</span> and <span>Functional Programming</span>, 
@@ -35,7 +38,9 @@ const JSBlock: React.FunctionComponent = () => {
                   and in the backend with <span>Express</span> and <span>Django</span>.
                 </p>
 
+              </Fade>
               </div>
+
             </div>
 
           </div>

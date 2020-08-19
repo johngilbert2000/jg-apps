@@ -9,13 +9,12 @@ import JSBlock from '../main/blocks/JSBlock';
 import resume from '../../images/resume.png';
 
 const Resume: React.FunctionComponent = () => {
-    console.log("Resume page");
     return(
         <div className="resume">
             <div className="content">
                 <h1>Resume</h1>
             </div>
-            <motion.div className="img-container" initial={{opacity: 0}} animate={{opacity:1}} transition={{duration: 1}}>
+            <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
 
                 <img src={resume} alt="resume-image"/>
             </motion.div>

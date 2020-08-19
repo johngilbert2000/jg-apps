@@ -41,7 +41,7 @@ const Portfolio: React.FunctionComponent = () => {
             </div>
             <div className="icon-container">
                 <a href="https://github.com/johngilbert2000" target="_blank"><i className="fab fa-github fa-3x"></i></a>
-                <p>My GitHub</p>
+                <p className="github-label">My GitHub</p>
             </div>
         </div>
     );

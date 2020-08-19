@@ -18,7 +18,7 @@ const ContactBlock: React.FunctionComponent = () => {
         {
           !msgSent && (
           <div className="card">
-            <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: 'spring', duration: 0.2, stiffness: 70}}>
+            <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
               Contact
             </motion.h1>
             <motion.p initial={{...init, scale: 0.2}} animate={final} transition={{...trans, delay: 0.4, stiffnes: 120}}>
@@ -37,8 +37,8 @@ const ContactBlock: React.FunctionComponent = () => {
           msgSent && (
             <div className="card">
               <div className="message-sent">
-                <h1>Message Sent</h1>
-                <p><i className="far fa-check-circle fa-6x"></i></p>
+                <motion.h1 initial={{y:100}} animate={{y:0}} transition={{...trans, delay: 0}}>Message Sent</motion.h1>
+                <p><motion.i className="far fa-check-circle fa-6x" initial={{opacity:0, scale: 0.5}} animate={{opacity:1, scale: 1}} transition={{delay: 0.3, duration: 0.4}}></motion.i></p>
               </div>
             </div>
           )

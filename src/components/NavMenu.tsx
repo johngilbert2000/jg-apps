@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
+import { Fade } from 'react-awesome-reveal';
 
 // interface Props {
 //     name: string;
