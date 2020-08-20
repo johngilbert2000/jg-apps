@@ -14,7 +14,7 @@ const PythonBlock: React.FunctionComponent = () => {
     const trans = {
       type: "spring",
       duration: 1,
-      delay: 0.8,
+      delay: 1.4, // 2.5
 
     }
 

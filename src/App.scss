@@ -321,7 +321,7 @@ body, input[type="text"], input[type="email"], textarea {
   display: hidden;
   z-index: -1;
   // scale: 0;
-  margin-top: -540px;
+  margin-top: -740px;
   // translate: 20rem;
   // rotate: -45deg;
 
@@ -770,8 +770,12 @@ body, input[type="text"], input[type="email"], textarea {
 
   textarea {
     width: 80%;
-    height: 70%;
+    height: 65%;
     // margin: 0px;
+
+    @media screen and (max-width: $media-size) {
+      height: 50%;
+    }
   }
 
   
@@ -952,7 +956,7 @@ body, input[type="text"], input[type="email"], textarea {
 
   .Title {
     position: absolute;
-    z-index: 0;
+    z-index: 1; // 0 WTF
     background: #eee;
     width: 100%;
     border-bottom: 1px solid $dark;
@@ -993,6 +997,7 @@ body, input[type="text"], input[type="email"], textarea {
 
 
     .card {
+      scale: 1;
       height: 200px;
       // width: 200px;
       background: $light;
@@ -1006,7 +1011,7 @@ body, input[type="text"], input[type="email"], textarea {
       // filter: blur(0);
 
       box-shadow: 0px 0px 2px $dark;
-      transition: all 0.4s ease-in-out;
+      // transition: all 0.4s ease-in-out;
 
       &:hover {
         box-shadow: 0px 0px 15px $dark;
@@ -1021,9 +1026,65 @@ body, input[type="text"], input[type="email"], textarea {
 
       h2, p {
         padding: 1rem;
-        background: linear-gradient(rgba($color: #eee, $alpha: 0.9), rgba(#eee, 0.4));
+        background: linear-gradient(rgba($color: #eee, $alpha: 1.0), rgba(#eee, 0.6));
         height: 100%;
       }
+
+      .inner-card {
+        width: 100%;
+        height: 100%;
+        border-radius: $default-radius;
+        position: relative;
+
+
+        // PLACEHOLDER FOR FLEXBOX
+        box-shadow: 0px 0px 2px $dark;
+        // transition: all 0.4s ease-in;
+
+        &:hover {
+          box-shadow: 0px 0px 15px $dark;
+          // filter: brightness(0.9);
+          // background: $light2;
+          // color: $light3;
+
+          h2, p {
+            background: rgba($color: $light2, $alpha: 0.8);
+          }
+        }
+
+        h2, p {
+          padding: 1rem;
+          background: linear-gradient(rgba($color: #eee, $alpha: 1.0), rgba(#eee, 0.6));
+          height: 100%;
+        }
+      }
+    }
+
+    .card-active {
+      // scale: 1;
+      position: fixed;
+      top: 25%;
+      // left: 30%;
+      width: 95%;
+      height: 60vh;
+      // margin: 5rem auto;
+      transition: all 0.2s ease-in;
+      z-index: 1;
+      
+
+    }
+
+    .card-zoomout {
+      scale: 0.90;
+      height: 200px;
+      width: 100%;
+      // transition: all 0.4s ease-in;
+      transition: all 0.3s ease;
+    }
+
+    .card-zoomin {
+      scale: 2;
+      transition: all 0.2s ease-in-out;
     }
 
     
@@ -1427,7 +1488,13 @@ body, input[type="text"], input[type="email"], textarea {
 
     &:active {
       box-shadow: none;
-      color: red;
+      // color: $secondary;
+      // border: 3px solid $secondary;
+      border-radius: $default-radius;
+      box-shadow: 0em 0em 25px rgba($yellow,1);
+      background: rgba($color: $yellow, $alpha: 0.3);
+      margin-bottom: 2rem;
+
     }
   }
 
