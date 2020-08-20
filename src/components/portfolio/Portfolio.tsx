@@ -17,6 +17,7 @@ import bg_os from '../../images/os_sched_scr.png';
 import bg_fed from '../../images/sentiment140_scr.png'; // default (no img yet)
 import bg_web from '../../images/web_scr.png';
 import { url } from 'inspector';
+import { Fade } from 'react-awesome-reveal';
 
 
 const Portfolio: React.FunctionComponent = () => {
@@ -26,6 +27,8 @@ const Portfolio: React.FunctionComponent = () => {
     // const controls = useAnimation();
 
     const [fade, setFade] = useState(false);
+    const [selectedID, setZoom] = useState(-1);
+    // let fade: boolean = false;
 
     const cardNames: string[] = [
         "Dengue Prediction",
@@ -65,26 +68,40 @@ const Portfolio: React.FunctionComponent = () => {
 //       console.log(checked, menuStyle);
 //     }
   
-    let selectedID: number = -1;
+    // let selectedID: number = -1;
 
     const expandCard = (idx: number) => {
         // console.log(selectedID);
         // const card = document.querySelector('.card');        
         const card = document.getElementById(`${idx}`);
-        // card?.classList.toggle('card-zoomin');
-        // setTimeout(() => { card?.classList.toggle('card-zoomin') }, 600);
-        setTimeout(() => { card?.classList.toggle('card-active') }, 100);
+
+        if (selectedID !== idx) {
+            console.log('zoom in', idx, selectedID);
+            card?.classList.toggle('card-zoomin');
+            setTimeout(() => { card?.classList.toggle('card-zoomin') }, 200);
+            // selectedID = idx;
+        }
+        setTimeout(() => { card?.classList.toggle('card-active') }, 200);
 
         // card?.classList.toggle('card-active');
         if (selectedID === idx) {
+            // setTimeout(() => {
+            //     console.log('zoomout');
+            //     card?.classList.toggle('card-zoomout');
+            //     setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200); // 200
+            // }, 300);
+            console.log('zoom out');
             card?.classList.toggle('card-zoomout');
-            setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200);
+            setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200); // 200
         }
+        // selectedID = idx;
 
-        // setFade(!fade);
+        setFade(!fade);
+        setZoom(idx);
+        // fade = !fade;
+        // setTimeout(() => setFade(!fade), 200);
 
         console.log(card);
-        selectedID = idx;
     }
 
     const cardClicked = (idx: number) => {
@@ -115,6 +132,12 @@ const Portfolio: React.FunctionComponent = () => {
                         {/* <motion.h2>{name}</motion.h2> */}
                     </motion.div>
 
+                )}
+
+                { fade && (
+                    // <Fade>
+                        <motion.div className="card-cover" initial={{opacity: 0}} animate={{opacity: 1}}></motion.div>
+                    // </Fade>
                 )}
 
             </div>
