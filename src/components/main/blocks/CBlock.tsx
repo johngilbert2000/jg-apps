@@ -8,7 +8,7 @@ const CBlock: React.FunctionComponent = () => {
             <Fade delay={500}>
             <p>
               I have modified and compiled a <span>Linux kernel</span>.
-              I can use <span>C</span> when performance is critical.
+              I am not afraid to use <span>C</span> when performance is critical.
             </p>
             <p>
               I have also experimented with a variety of 

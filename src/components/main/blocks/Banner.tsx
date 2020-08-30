@@ -4,7 +4,7 @@ import { Fade } from 'react-awesome-reveal';
 
 const Banner: React.FunctionComponent = () => {
 
-    const d = 0.7; // delay 1.7
+    const d = 0.5; // delay 1.7 0.7
 
     const coverInit = {
       opacity: 0,

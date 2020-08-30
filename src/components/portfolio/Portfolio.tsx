@@ -140,24 +140,39 @@ const Portfolio: React.FunctionComponent = () => {
                     onClick={() => expandCard(idx)}
                     whileTap={{scale: 0.94}}>
                         {/* <div className="inner-card" id={`${idx}`} key={idx} onClick={() => expandCard(idx)}> */}
-                            <motion.h2>{name}</motion.h2>
+                        <motion.h2>{name}</motion.h2>
                             {/* <p className="card-info"> {dummyText} </p> */}
                             {/* <p className="card-info"> {dummyText} </p> */}
                         {/* </div> */}
                         {/* <motion.h2>{name}</motion.h2> */}
                         {fade && (
-                            <div>
-                                <p className="card-info"> {dummyText} </p>
-                                <div className="X"><h1>&times;</h1></div>
-                                
+                            <div className="scroll-me">
+                                <div className="long-content">
 
+                                    {/* <p className="card-info"> {dummyText} </p> */}
+                                    <p className="card-info"></p>
+
+                                {/* <p className="card-info"> {dummyText} </p> */}
+                                </div>
                             </div>
-
+                                
                             // <p className="card-info"> {dummyText} </p>
                         ) }
+                        {fade && (
+                            <div className="X"><h1>&times;</h1></div>
+                        )}
                     </motion.div>
-
                 )}
+
+                { fade && (
+                    <motion.div className="scroll-this" initial={{opacity:0}} animate={{opacity: 1}}>
+                        <p>{dummyText}</p>
+                        <div className="btn-wrapper">
+                            <button className="btn">View on Github</button>
+                        </div>
+                    </motion.div>
+                )}
+
 
                 { fade && (
                     // <Fade>
