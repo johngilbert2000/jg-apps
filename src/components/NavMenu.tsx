@@ -73,7 +73,29 @@ const NavMenu: React.FunctionComponent = () => {
                 <Link to="/portfolio"><li>Portfolio</li></Link>
                 <Link to="/resume"><li>Resume</li></Link>
                 <Link to="/contact"><li>Contact</li></Link>
+                {/* <Link to="/"><i className="fas fa-globe"></i></Link> */}
                 </ul>
+
+                {/* <div className="dropdown">
+                  <div className="dropbtn">
+                    <i className="fas fa-globe"></i>Language
+                  </div>
+                  <div className="dropdown-content">
+                    <p>English</p>
+                    <p>Español</p>
+                    <p>繁體中文</p>
+                    <p>简体中文</p>
+                  </div>
+                </div> */}
+                <div className="selection">
+                  <i className="fas fa-globe"></i>
+                  <select>
+                    <option>English</option>
+                    <option>Español</option>
+                    <option>繁體中文</option>
+                    <option>简体中文</option>
+                  </select>
+                </div>
             </div>
             </div>
 

@@ -9,12 +9,13 @@ $light2: #dae5f0;// #D9E8F4;
 $light3: rgb(188, 188, 188);
 $dark: rgb(40, 40, 40);
 $dark2: rgb(11, 25, 46);
+$light-dark: rgb(48, 47, 50);
 $highlight-light: $primary3; // rgb(0, 63, 199); // primary3 #003BAE
 // $text-light: rgb(49, 67, 90);
 $highlight-dark: $primary2;
 $bright: #f14b32;
 $default-radius: 0.8em;
-$media-size: 550px;
+$media-size: 550px; //550px
 
 $darkblue1: rgb(0,62,128);
 $darkblue2: rgb(40, 41, 128);
@@ -133,7 +134,8 @@ body, input[type="text"], input[type="email"], textarea {
   width: 100%;
   padding: 8px;
   height: 60px;
-  overflow: auto;
+  // height: 500px;
+  // overflow: auto;
   background: $dark;
   position: absolute;
   color:#eee;
@@ -141,18 +143,14 @@ body, input[type="text"], input[type="email"], textarea {
   flex-direction: row;
   align-content: space-between;
   align-items: center;
-  overflow: hidden;
+  // overflow: hidden;
   letter-spacing: 1px;
-  // text-transform: uppercase;
   font-variant: small-caps;
   font-size: 18px;
   transition: opacity 1s ease-in-out;
   transition: height 1s ease-in-out;
 
-  z-index: 4;
-
-  // align-content: center;
-  // justify-content: center;
+  z-index: 90; /// 4
 
   @media screen and (max-width: $media-size) {
     opacity: 1;
@@ -179,11 +177,12 @@ body, input[type="text"], input[type="email"], textarea {
     margin-top: 4px;
     transition: all 0.5s ease-in-out;
     margin-right: 0;
-    overflow: hidden;
+    // overflow: hidden; // 
     // margin-left: 20%;
     // padding-left: 20%;
     @media screen and (min-width: $media-size) {
-      padding-left: 90%;
+      padding-left: 70%; // 90%
+      padding-right: 100px;
     }
 
     @media screen and (max-width: $media-size) {
@@ -269,11 +268,15 @@ body, input[type="text"], input[type="email"], textarea {
   }
 
   .moveleft {
-    float: left;
+    // float: left;
   }
   .moveright {
-    float:right;
+    // float:right;
+
+
   }
+
+
 
   a {
     text-decoration: none;
@@ -294,8 +297,104 @@ body, input[type="text"], input[type="email"], textarea {
 
     @media screen and (max-width: 750px) {
       padding: 0rem 0.7rem;
+      font-size: 15px;
     }
   }
+}
+
+// .dropdown {
+//   overflow: scroll;
+//   font: inherit;
+//   width: 200px;
+//   background: red;
+//   display: block;
+
+//   z-index: 90;
+
+//   &:hover {
+//     color: $highlight-dark;
+
+//     .dropdown-content {
+//       display: block;
+//     }
+//   }
+
+//   .dropdown-content {
+//     display: block;
+//     position: absolute;
+//     background: $dark;
+//     background: red;
+//     min-width: 200px;
+//     z-index: 90;
+
+//     &:hover {
+//       display: block;
+//     }
+
+//   }
+
+// }
+
+
+.selection {
+  position: absolute;
+  top: 16px;
+  right: 3px;
+  border-radius: $default-radius;
+  font-variant: small-caps;
+  background-color: rgb(53, 52, 55);
+  overflow: hidden;
+  text-overflow: unset;
+  justify-content: left;
+  padding-left: 5px;
+  color: $light;
+  transition: all 0.4s ease-in-out;
+  opacity: 1;
+
+  @media screen and (max-width: $media-size) {
+    transform: translate(50%, 0);
+    transition: all 0.7s ease-in-out;
+    opacity: 0;
+  }
+
+}
+
+.selection select {
+  background-color: rgb(53, 52, 55);
+  color: $light;
+  // padding: 5px;
+  padding-top: 3px;
+  width: 80px;
+  border: none;
+  font-size: 18px;
+  -webkit-appearance: button;
+  appearance: button;
+  outline: none;
+  font-variant: small-caps;
+
+
+}
+
+.selection::before {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  text-align: center;
+  font-size: 28px;
+  line-height: 45px;
+  pointer-events: none;
+  font-variant: small-caps;
+}
+
+.selection:hover::before {
+  font-variant: small-caps;
+}
+
+.selection select option {
+  padding: 5px 0px;
+  font-variant: small-caps;
+  font-size: 20px;
 }
 
 .menu {
