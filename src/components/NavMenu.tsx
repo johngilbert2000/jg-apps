@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 import { Fade, Bounce, Slide } from 'react-awesome-reveal';
 import {motion} from 'framer-motion';
@@ -8,6 +8,13 @@ import {motion} from 'framer-motion';
 // }
 
 const NavMenu: React.FunctionComponent = () => {
+
+    const [lang, setLang] = useState("english");
+
+    const changeLang = (event: any) => {
+      setLang(event.target.value);
+    }
+
     const titles: string[] = [
         "Main",
         "About",
@@ -36,7 +43,6 @@ const NavMenu: React.FunctionComponent = () => {
       const nav = document.querySelector('Navbar');
   
       burger?.addEventListener('click', () => {
-        console.log('hello');
         // nav?.classList.toggle('nav-active');
       });
     }
@@ -68,11 +74,81 @@ const NavMenu: React.FunctionComponent = () => {
                 <Link to="/resume"><motion.li initial={initial} animate={final} transition={{...trans, delay: 0.4+s}}>Resume</motion.li></Link>
                 <Link to="/contact"><motion.li initial={initial} animate={final} transition={{...trans, delay: 0.5+s}}>Contact</motion.li></Link> */}
 
-                <Link to="/"><li>Main</li></Link>
-                <Link to="/about"><li>About</li></Link>
+                <Link to="/">
+                  <li>
+                    {(() => {
+                      switch (lang) {
+                        case "english":   return "Main";
+                        case "spanish": return "Inicio";
+                        case "chinese_simplified":  return "首页";
+                        case "chinese_traditional":  return "首頁";
+                        default:      return "Main";
+                      }
+                    })()}
+                  </li>
+                </Link>
+
+                <Link to="/about">
+                  <li>
+                    {(() => {
+                      switch (lang) {
+                        case "english":   return "About";
+                        case "spanish": return "Acerca de Mí";
+                        case "chinese_traditional":  return "關於我";
+                        case "chinese_simplified":  return "关于我";
+                        default:      return "About";
+                      }
+                    })()}
+                  </li>
+                </Link>
+
+                <Link to="/portfolio">
+                  <li>
+                    {(() => {
+                      switch (lang) {
+                        case "english":   return "Portfolio";
+                        case "spanish": return "Portafolio";
+                        case "chinese_traditional":  return "專案";
+                        case "chinese_simplified":  return "专案";
+                        default:      return "Portfolio";
+                      }
+                    })()}
+                  </li>
+                </Link>
+
+                <Link to="/resume">
+                  <li>
+                    {(() => {
+                      switch (lang) {
+                        case "english":   return "Resume";
+                        case "spanish": return "Currículum";
+                        case "chinese_traditional":  return "簡歷";
+                        case "chinese_simplified":  return "简历";
+                        default:      return "Resume";
+                      }
+                    })()}
+                  </li>
+                </Link>
+
+                <Link to="/contact">
+                  <li>
+                    {(() => {
+                      switch (lang) {
+                        case "english":   return "Contact";
+                        case "spanish": return "Contactame";
+                        case "chinese_traditional":  return "聯絡";
+                        case "chinese_simplified":  return "联络";
+                        default:      return "Contact";
+                      }
+                    })()}
+                  </li>
+                </Link>
+
+
+                {/* <Link to="/about"><li>About</li></Link>
                 <Link to="/portfolio"><li>Portfolio</li></Link>
                 <Link to="/resume"><li>Resume</li></Link>
-                <Link to="/contact"><li>Contact</li></Link>
+                <Link to="/contact"><li>Contact</li></Link> */}
                 {/* <Link to="/"><i className="fas fa-globe"></i></Link> */}
                 </ul>
 
@@ -87,13 +163,13 @@ const NavMenu: React.FunctionComponent = () => {
                     <p>简体中文</p>
                   </div>
                 </div> */}
-                <div className="selection">
+                <div className="selection" >
                   <i className="fas fa-globe"></i>
-                  <select>
-                    <option>English</option>
-                    <option>Español</option>
-                    <option>繁體中文</option>
-                    <option>简体中文</option>
+                  <select value={lang} onChange={changeLang}>
+                    <option value="english">English</option>
+                    <option value="spanish">Español</option>
+                    <option value="chinese_traditional">繁體中文</option>
+                    <option value="chinese_simplified">简体中文</option>
                   </select>
                 </div>
             </div>
