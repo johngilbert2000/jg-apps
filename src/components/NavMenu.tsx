@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Link, BrowserRouter as Router } from 'react-router-dom';
 import { Fade, Bounce, Slide } from 'react-awesome-reveal';
 import {motion} from 'framer-motion';
+import { StoreContext } from './storeContext';
 
 // interface Props {
 //     name: string;
@@ -9,7 +10,9 @@ import {motion} from 'framer-motion';
 
 const NavMenu: React.FunctionComponent = () => {
 
-    const [lang, setLang] = useState("english");
+    // const [lang, setLang] = useState("english");
+    const Context = useContext(StoreContext);
+    const [lang, setLang] = Context.lang;
 
     const changeLang = (event: any) => {
       setLang(event.target.value);

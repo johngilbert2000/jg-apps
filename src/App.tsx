@@ -21,12 +21,14 @@ import main_bg from './images/main_bg2.png';
 import navbar_drip from './images/navbar_drip.jpeg';
 import smoke from './images/smoke.jpeg';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
+import StoreProvider from './components/storeContext';
 
 function App() {
 
   return (
     <Router>
     <div className="App">
+      <StoreProvider>
       <NavMenu />
       <AnimatePresence exitBeforeEnter >
         <Switch>
@@ -38,6 +40,7 @@ function App() {
           <Route path="/" component={Page404} />
         </Switch>
       </AnimatePresence>
+      </StoreProvider>
       
     </div>
     </Router>
