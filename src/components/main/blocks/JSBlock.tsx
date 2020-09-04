@@ -49,14 +49,14 @@ const JSBlock: React.FunctionComponent = () => {
             <div className="">
               <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
               <p>
-                I am familiar with both <span>Object-Oriented Programming</span> and <span>Functional Programming</span>, 
-                and can adapt my programming style to meet your company’s needs.
+                Estoy familiarizado con <span> Object-Oriented Programming</span> (Programación Orientada a Objectos) 
+                y <span>Programación Funcional</span>, y puedo adaptar mi estilo de programación para satisfacer 
+                las necesidades de su empresa.
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
-              {/* <span className="lighter"> <i className="fab fa-node-js fa-2x"></i></span> */}
               <p>
-                I have done projects in the frontend with <span>React</span>, 
-                and in the backend with <span>Express</span> and <span>Django</span>.
+                He hecho proyectos utilizando <span>React</span>, <span>Express</span>, y <span>Django</span>. 
+                Puedo ser un desarrollador de frontend o de backend para su empresa.
               </p>
             </Fade>
             </div>
@@ -68,14 +68,13 @@ const JSBlock: React.FunctionComponent = () => {
             <div className="">
               <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
               <p>
-                I am familiar with both <span>Object-Oriented Programming</span> and <span>Functional Programming</span>, 
-                and can adapt my programming style to meet your company’s needs.
+              我對 <span>Object Oriented Programming</span> (物件導向程式設計）
+              和 <span>Functional Programming</span> (函式編程）都很熟悉，所以我可以為公司改變我寫程式的方法。
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
-              {/* <span className="lighter"> <i className="fab fa-node-js fa-2x"></i></span> */}
               <p>
-                I have done projects in the frontend with <span>React</span>, 
-                and in the backend with <span>Express</span> and <span>Django</span>.
+                我用過 <span>React</span>、 <span>Express</span>、和 <span>Django</span>。<br />
+                我對前端和後端都有能力。
               </p>
             </Fade>
             </div>
@@ -87,14 +86,13 @@ const JSBlock: React.FunctionComponent = () => {
             <div className="">
               <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
               <p>
-                I am familiar with both <span>Object-Oriented Programming</span> and <span>Functional Programming</span>, 
-                and can adapt my programming style to meet your company’s needs.
+                我对 <span>Object Oriented Programming</span> (物件导向程序设计) 和 <span>Functional Programmming</span>
+                (函式编程) 都很熟悉，所以我可以为公司改变我些程序的方法。
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
-              {/* <span className="lighter"> <i className="fab fa-node-js fa-2x"></i></span> */}
               <p>
-                I have done projects in the frontend with <span>React</span>, 
-                and in the backend with <span>Express</span> and <span>Django</span>.
+                我用过 <span>React</span>、<span>Express</span>、和 <span>Django</span>。<br />
+                我对前端和后端都有能力。
               </p>
             </Fade>
             </div>

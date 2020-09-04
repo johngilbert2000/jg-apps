@@ -61,7 +61,7 @@ const PythonBlock: React.FunctionComponent = () => {
         <motion.div className="content Title" initial={coverInit} animate={coverFinal} transition={trans}>
           <Fade damping={1.5} delay={300} fraction={0.4} duration={1500}>
           <motion.p initial={coverInit} animate={coverFinal} transition={{...trans, delay: 1}}>
-            對<span>自然語言</span>處理、<span>圖像分類</span>、以及<span>表格數據分析</span>都有經驗。
+            對<span>自然語言處理</span>、<span>圖像分類</span>、以及<span>表格數據分析</span>都有經驗。
             我用過 <span>Pytorch</span> 和 <span>Tensorflow</span> 為了做出來深度學習的模型和優化器。
           </motion.p>
           <p>
@@ -74,16 +74,12 @@ const PythonBlock: React.FunctionComponent = () => {
         <motion.div className="content Title" initial={coverInit} animate={coverFinal} transition={trans}>
           <Fade damping={1.5} delay={300} fraction={0.4} duration={1500}>
           <motion.p initial={coverInit} animate={coverFinal} transition={{...trans, delay: 1}}>
-          {/* <p> */}
-            Experienced with <span>Natural Language Processing, Image Classification</span>, and <span>Tabular Data</span> analysis, 
-            I have developed deep learning models and optimizers in <span>Pytorch</span> and <span>Tensorflow</span>.
+            对<span>自然语言处理</span>、<span>图像分析</span>、以及<span>表格数据分析</span>都有经验。
+            我用过 <span>Pytorch</span> 和 <span>Tensorflow</span> 为了做出来深度学习的模型和优化器。
           </motion.p>
-          {/* </p> */}
-          {/* <Fade triggerOnce={true}> */}
           <p>
-            I am familiar with <span>Python’s</span> ecosystem and its computational limitations. 
-            I have used both <span>Cython</span> and <span>Numba</span> to achieve performance boosts when 
-            the code could not run on the <span>GPU</span> or be vectorized with <span>Numpy</span>.
+            我对 <span>Python</span> 的生态系统和他的运算缺点很熟悉。
+            我用过 <span>Cython</span> 和 <span>Numba</span> 为了进步优化，还有 <span>Numpy</span> 的向量功能也会常用。
           </p>
           </Fade>
         </motion.div>
