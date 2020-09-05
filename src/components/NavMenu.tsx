@@ -166,7 +166,7 @@ const NavMenu: React.FunctionComponent = () => {
                     <p>简体中文</p>
                   </div>
                 </div> */}
-                <div className="selection" >
+                {/* <div className="selection" >
                   <i className="fas fa-globe"></i>
                   <select value={lang} onChange={changeLang}>
                     <option value="english">English</option>
@@ -174,8 +174,18 @@ const NavMenu: React.FunctionComponent = () => {
                     <option value="chinese_traditional">繁體中文</option>
                     <option value="chinese_simplified">简体中文</option>
                   </select>
-                </div>
+                </div> */}
             </div>
+            </div>
+            
+            <div className="selection" >
+              <i className="fas fa-globe"></i>
+              <select value={lang} onChange={changeLang}>
+                <option value="english">English</option>
+                <option value="spanish">Español</option>
+                <option value="chinese_traditional">繁體中文</option>
+                <option value="chinese_simplified">简体中文</option>
+              </select>
             </div>
 
             <div>

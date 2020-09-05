@@ -59,7 +59,7 @@ const Banner: React.FunctionComponent = () => {
             探索 <br />成就 <br />超越
           </motion.h1>
           <motion.h2 className="Title2" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
-            聘用對<span>人工智慧</span>、<span>網站編輯 </span>、以及<span>科學研究</span>有能力的編程者吧
+            聘用對<span>人工智慧</span>、<span>網站編程</span>、以及<span>科學研究</span>有能力的編程者吧
           </motion.h2>
           </Fade>
         </div>
