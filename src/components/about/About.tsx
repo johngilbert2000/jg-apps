@@ -74,16 +74,17 @@ const About: React.FunctionComponent = () => {
                 <div className="content-container">
                     <motion.div className="content" initial={contentInitial} animate={final} exit={contentInitial} transition={{duration: 0.1}} >
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans} whileHover={hover}>
-                            Hello, my name is <span>John Gilbert</span> and I am passionate about science and technology. 
-                            Current interests include <span>AI</span> and <span>distributed systems</span>. 
-                            I also love to travel, and am fluent in <span>English, Spanish,</span> and <span>Mandarin Chinese</span>. 
-                            I am always learning new skills.
+                            Hola, me llamo <span>John Gilbert</span>, y soy apasionado por la ciencia y tecnología. 
+                            Mis intereses incluyen la <span>inteligencia artificial</span> y <span>sistemas distribuidos</span>. 
+                            Me encanta viajar también, y hablo fluido <span>ingles</span>, <span>español</span>, y <span>chino</span>. 
+                            Siempre estoy aprendiendo nuevas habilidades.
                         </motion.p>
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans2} whileHover={hover}>
-                            Prior to developing software, 
-                            I worked as a <span>chemist</span> in <span>analytical</span> and <span>organic research</span> laboratories,
-                            as well as in the pharmaceutical industry. 
-                            Skilled in the <span>scientific method</span>, I bring both rigor and experimentation to my work.
+                            Antes de desarrollar software, tabajé como un <span>químico</span> en 
+                            laboratorios <span>analiticos</span> y de <span>investigación organicos</span>, 
+                            y también en la industria farmacéutica. 
+                            Con un firme <span>conocimiento de la ciencia</span>, el rigor cientifico y la experimentación 
+                            son cualidades de mi trabajo.
                         </motion.p>
                     </motion.div>
                 </div>
@@ -91,16 +92,13 @@ const About: React.FunctionComponent = () => {
                 <div className="content-container">
                     <motion.div className="content" initial={contentInitial} animate={final} exit={contentInitial} transition={{duration: 0.1}} >
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans} whileHover={hover}>
-                            Hello, my name is <span>John Gilbert</span> and I am passionate about science and technology. 
-                            Current interests include <span>AI</span> and <span>distributed systems</span>. 
-                            I also love to travel, and am fluent in <span>English, Spanish,</span> and <span>Mandarin Chinese</span>. 
-                            I am always learning new skills.
+                            您好，我叫 <span>John Gilbert</span>，還有我對科學和科技都熱烈感興趣。
+                            目前興趣包括<span>人工智慧</span>和<span>分散式系統</span>。另外，我喜歡旅遊。
+                            我<span>英文</span>、<span>西班牙文</span>、和<span>中文</span>都會說得很流利。我一直在學新的能力。
                         </motion.p>
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans2} whileHover={hover}>
-                            Prior to developing software, 
-                            I worked as a <span>chemist</span> in <span>analytical</span> and <span>organic research</span> laboratories,
-                            as well as in the pharmaceutical industry. 
-                            Skilled in the <span>scientific method</span>, I bring both rigor and experimentation to my work.
+                            寫程式之前，我在<span>分析化學</span>和<span>有機化學</span>的實驗室當過<span>化學家</span>，
+                            而且在製藥業工作過。我習慣了從科學的角度來開始解決問題。
                         </motion.p>
                     </motion.div>
                 </div>
@@ -108,16 +106,13 @@ const About: React.FunctionComponent = () => {
                 <div className="content-container">
                     <motion.div className="content" initial={contentInitial} animate={final} exit={contentInitial} transition={{duration: 0.1}} >
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans} whileHover={hover}>
-                            Hello, my name is <span>John Gilbert</span> and I am passionate about science and technology. 
-                            Current interests include <span>AI</span> and <span>distributed systems</span>. 
-                            I also love to travel, and am fluent in <span>English, Spanish,</span> and <span>Mandarin Chinese</span>. 
-                            I am always learning new skills.
+                            您好，我叫 <span>John Gilbert</span>，还有我对科学和科技都热烈感兴趣。
+                            目前兴趣包括<span>人工智慧</span>和<span>分散式系统</span>。另外，我喜欢旅游。
+                            我<span>英文</span>、<span>西班牙文</span>、和<span>中文</span>都会说得很流利。我一直在学新的能力。
                         </motion.p>
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans2} whileHover={hover}>
-                            Prior to developing software, 
-                            I worked as a <span>chemist</span> in <span>analytical</span> and <span>organic research</span> laboratories,
-                            as well as in the pharmaceutical industry. 
-                            Skilled in the <span>scientific method</span>, I bring both rigor and experimentation to my work.
+                            写程序之前，我在<span>分析化学</span>和<span>有机化学</span>的实验室当过<span>化学家</span>，
+                            而且我在制药业工作过。我习惯了从科学的角度来开始解决问题。
                         </motion.p>
                     </motion.div>
                 </div>

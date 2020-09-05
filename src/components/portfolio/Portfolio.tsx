@@ -25,7 +25,9 @@ const Portfolio: React.FunctionComponent = () => {
     // const controls = useAnimation();
 
     const [fade, setFade] = useState(false);
-    const [selectedID, setZoom] = useState(-1);
+    const [selectedID, setZoom] = useState(0);
+
+    const [cardValue, setCardValue] = useState("");
     // let fade: boolean = false;
 
     const cardNames: string[] = [
@@ -40,6 +42,95 @@ const Portfolio: React.FunctionComponent = () => {
         "React Portfolio",
     ]
 
+    const cardDescriptions: string[] = [
+        "Dengue Prediction description english",
+        "Nested Lookahead description english",
+        "Sentiment140 Analysis description english",
+        "Bacteriocin Sequence Prediction description english",
+        "Quantum Phase Estimation description english",
+        "KDE Implementation description english",
+        "OS Scheduler description english",
+        "Asynchronous Federated Learning description english",
+        "React Portfolio description english",
+    ]
+
+
+    const cardNames_spanish: string[] = [
+        "Dengue Prediction",
+        "Nested Lookahead",
+        "Sentiment140 Analysis",
+        "Bacteriocin Sequence Prediction",
+        "Quantum Phase Estimation",
+        "KDE Implementation",
+        "OS Scheduler",
+        "Asynchronous Federated Learning",
+        "React Portfolio",
+    ]
+
+    const cardDescriptions_spanish: string[] = [
+        "Dengue Prediction description spanish",
+        "Nested Lookahead description spanish",
+        "Sentiment140 Analysis description spanish",
+        "Bacteriocin Sequence Prediction description spanish",
+        "Quantum Phase Estimation description spanish",
+        "KDE Implementation description spanish",
+        "OS Scheduler description spanish",
+        "Asynchronous Federated Learning description spanish",
+        "React Portfolio description spanish",
+    ]
+
+
+    const cardNames_chinese_traditional: string[] = [
+        "Dengue Prediction",
+        "Nested Lookahead",
+        "Sentiment140 Analysis",
+        "Bacteriocin Sequence Prediction",
+        "Quantum Phase Estimation",
+        "KDE Implementation",
+        "OS Scheduler",
+        "Asynchronous Federated Learning",
+        "React Portfolio",
+    ]
+
+    const cardDescriptions_chinese_traditional: string[] = [
+        "Dengue Prediction description chinese traditional",
+        "Nested Lookahead description chinese traditional",
+        "Sentiment140 Analysis description chinese traditional",
+        "Bacteriocin Sequence Prediction description chinese traditional",
+        "Quantum Phase Estimation description chinese traditional",
+        "KDE Implementation description chinese traditional",
+        "OS Scheduler description chinese traditional",
+        "Asynchronous Federated Learning description chinese traditional",
+        "React Portfolio description chinese traditional",
+    ]
+
+
+    const cardNames_chinese_simplified: string[] = [
+        "Dengue Prediction",
+        "Nested Lookahead",
+        "Sentiment140 Analysis",
+        "Bacteriocin Sequence Prediction",
+        "Quantum Phase Estimation",
+        "KDE Implementation",
+        "OS Scheduler",
+        "Asynchronous Federated Learning",
+        "React Portfolio",
+    ]
+
+    const cardDescriptions_chinese_simplified: string[] = [
+        "Dengue Prediction description chinese simplified",
+        "Nested Lookahead description chinese simplified",
+        "Sentiment140 Analysis description chinese simplified",
+        "Bacteriocin Sequence Prediction description chinese simplified",
+        "Quantum Phase Estimation description chinese simplified",
+        "KDE Implementation description chinese simplified",
+        "OS Scheduler description chinese simplified",
+        "Asynchronous Federated Learning description chinese simplified",
+        "React Portfolio description chinese simplified",
+    ]
+
+
+
     const cardBackgrounds: string[] = [
         bg_dengue,
         bg_nested,
@@ -52,33 +143,6 @@ const Portfolio: React.FunctionComponent = () => {
         bg_web,
     ]
 
-    const dummyText: string = `Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, 
-    totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. 
-    Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui 
-    ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, 
-    adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.
-     Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? 
-     Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat
-      quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti 
-      atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia 
-      deserunt mollitia animi, id est laborum et dolorum fuga. Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, 
-      cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere`
-
-//    let checked:boolean = false;
-//     let menuStyle
-  
-//     let handleCheck = () => {
-//       checked = !checked;
-//       menuStyle = {"opacity": (checked ? 1 : 0)};
-//       const menu = document.querySelector('.menu');
-//       console.log(menu?.classList);
-//       // menu?.toggleAttribute('menu-active')
-//       menu?.classList.toggle('menu-active');
-  
-//       console.log(checked, menuStyle);
-//     }
-  
-    // let selectedID: number = -1;
 
     const expandCard = (idx: number) => {
         // console.log(selectedID);
@@ -86,10 +150,18 @@ const Portfolio: React.FunctionComponent = () => {
         const card = document.getElementById(`${idx}`);
 
         if (selectedID !== idx) {
-            console.log('zoom in', idx, selectedID);
+            // console.log('zoom in', idx, selectedID);
             card?.classList.toggle('card-zoomin');
             setTimeout(() => { card?.classList.toggle('card-zoomin') }, 200);
             // selectedID = idx;
+            switch(lang) {
+                case "english": setCardValue(cardDescriptions[idx]); break;
+                case "spanish": setCardValue(cardDescriptions_spanish[idx]); break;
+                case "chinese_traditional": setCardValue(cardDescriptions_chinese_traditional[idx]); break;
+                case "chinese_simplified": setCardValue(cardDescriptions_chinese_simplified[idx]); break;
+                default: setCardValue(cardDescriptions[idx]);
+            }
+            // setCardValue(cardNames[idx]);
         }
         setTimeout(() => { card?.classList.toggle('card-active') }, 200);
 
@@ -100,7 +172,7 @@ const Portfolio: React.FunctionComponent = () => {
             //     card?.classList.toggle('card-zoomout');
             //     setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200); // 200
             // }, 300);
-            console.log('zoom out');
+            // console.log('zoom out');
             card?.classList.toggle('card-zoomout');
             setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200); // 200
         }
@@ -111,7 +183,7 @@ const Portfolio: React.FunctionComponent = () => {
         // fade = !fade;
         // setTimeout(() => setFade(!fade), 200);
 
-        console.log(card);
+        // console.log(card);
     }
 
     const cardClicked = (idx: number) => {
@@ -127,15 +199,7 @@ const Portfolio: React.FunctionComponent = () => {
         
 
         <div>
-        {/* {(lang==="english") && (
 
-        ) || (lang==="spanish") && (
-
-        ) || (lang==="chinese_traditional") && (
-
-        ) || (lang==="chinese_simplified") && (
-
-        )} */}
 
             <div className="portfolio">
                 <div className="Title">
@@ -170,9 +234,19 @@ const Portfolio: React.FunctionComponent = () => {
 
                     { fade && (
                         <motion.div className="scroll-this" initial={{opacity:0}} animate={{opacity: 1}}>
-                            <p>{dummyText}</p>
+                            {(lang==="english") && (
+                                <p>{cardDescriptions[selectedID]}</p>
+                            ) || (lang==="spanish") && (
+                                <p>{cardDescriptions_spanish[selectedID]}</p>
+                            ) || (lang==="chinese_traditional") && (
+                                <p>{cardDescriptions_chinese_traditional[selectedID]}</p>
+                            ) || (lang==="chinese_simplified") && (
+                                <p>{cardDescriptions_chinese_simplified[selectedID]}</p>
+                            )}
                             <div className="btn-wrapper">
-                                <button className="btn">View on Github</button>
+                                <a href="https://github.com/johngilbert2000" target="_blank">
+                                    <button className="btn">View on Github</button>
+                                </a>
                             </div>
                         </motion.div>
                     )}
