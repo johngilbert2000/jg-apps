@@ -1,11 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import {motion, useAnimation} from 'framer-motion';
-
-import Banner from '../main/blocks/Banner';
-import ContactBlock from '../main/blocks/ContactBlock';
-import CBlock from '../main/blocks/CBlock';
-import PythonBlock from '../main/blocks/PythonBlock';
-import JSBlock from '../main/blocks/JSBlock';
 
 import bg_dengue from '../../images/dengue_scr.png';
 import bg_nested from '../../images/nestedlookahead_scr.png';
@@ -18,9 +12,13 @@ import bg_fed from '../../images/sentiment140_scr.png'; // default (no img yet)
 import bg_web from '../../images/web_scr.png';
 import { url } from 'inspector';
 import { Fade } from 'react-awesome-reveal';
+import { StoreContext } from '../storeContext';
 
 
 const Portfolio: React.FunctionComponent = () => {
+    const Context = useContext(StoreContext);
+    const [lang, setLang] = Context.lang;
+
     const cardInit = {opacity:0, scale:1};
     const cardFinal = {opacity:1, scale:1};
     const trans = {type:"spring", duration: 0.2};
@@ -126,65 +124,73 @@ const Portfolio: React.FunctionComponent = () => {
     }
 // (event, info)=> {console.log(info.point.x, info.point.y, event);}
     return(
-        <div className="portfolio">
-            <div className="Title">
-                <h1>Portfolio</h1>
-            </div>
-            <div className="content">
-                {cardNames.map((name, idx) => 
+        
 
-                
-                    <motion.div id={`${idx}`} key={idx} className="card" 
-                    style={{backgroundImage: `url(${cardBackgrounds[idx]})`}} 
-                    initial={cardInit} animate={cardFinal} transition={{...trans, delay: 0.1*idx}}
-                    onClick={() => expandCard(idx)}
-                    whileTap={{scale: 0.94}}>
-                        {/* <div className="inner-card" id={`${idx}`} key={idx} onClick={() => expandCard(idx)}> */}
-                        <motion.h2>{name}</motion.h2>
-                            {/* <p className="card-info"> {dummyText} </p> */}
-                            {/* <p className="card-info"> {dummyText} </p> */}
-                        {/* </div> */}
-                        {/* <motion.h2>{name}</motion.h2> */}
-                        {fade && (
-                            <div className="scroll-me">
-                                <div className="long-content">
+        <div>
+        {/* {(lang==="english") && (
 
-                                    {/* <p className="card-info"> {dummyText} </p> */}
-                                    <p className="card-info"></p>
+        ) || (lang==="spanish") && (
 
-                                {/* <p className="card-info"> {dummyText} </p> */}
+        ) || (lang==="chinese_traditional") && (
+
+        ) || (lang==="chinese_simplified") && (
+
+        )} */}
+
+            <div className="portfolio">
+                <div className="Title">
+                    <h1>Portfolio</h1>
+                </div>
+                <div className="content">
+                    {cardNames.map((name, idx) => 
+
+                    
+                        <motion.div id={`${idx}`} key={idx} className="card" 
+                        style={{backgroundImage: `url(${cardBackgrounds[idx]})`}} 
+                        initial={cardInit} animate={cardFinal} transition={{...trans, delay: 0.1*idx}}
+                        onClick={() => expandCard(idx)}
+                        whileTap={{scale: 0.94}}>
+                            <motion.h2>{name}</motion.h2>
+
+                            {fade && (
+                                <div className="scroll-me">
+                                    <div className="long-content">
+
+                                        <p className="card-info"></p>
+
+                                    </div>
                                 </div>
+                                    
+                            ) }
+                            {fade && (
+                                <div className="X"><h1>&times;</h1></div>
+                            )}
+                        </motion.div>
+                    )}
+
+                    { fade && (
+                        <motion.div className="scroll-this" initial={{opacity:0}} animate={{opacity: 1}}>
+                            <p>{dummyText}</p>
+                            <div className="btn-wrapper">
+                                <button className="btn">View on Github</button>
                             </div>
-                                
-                            // <p className="card-info"> {dummyText} </p>
-                        ) }
-                        {fade && (
-                            <div className="X"><h1>&times;</h1></div>
-                        )}
-                    </motion.div>
-                )}
-
-                { fade && (
-                    <motion.div className="scroll-this" initial={{opacity:0}} animate={{opacity: 1}}>
-                        <p>{dummyText}</p>
-                        <div className="btn-wrapper">
-                            <button className="btn">View on Github</button>
-                        </div>
-                    </motion.div>
-                )}
+                        </motion.div>
+                    )}
 
 
-                { fade && (
-                    // <Fade>
-                        <motion.div className="card-cover" initial={{opacity: 0}} animate={{opacity: 1}}></motion.div>
-                    // </Fade>
-                )}
+                    { fade && (
+                        // <Fade>
+                            <motion.div className="card-cover" initial={{opacity: 0}} animate={{opacity: 1}}></motion.div>
+                        // </Fade>
+                    )}
 
+                </div>
+                <div className="icon-container">
+                    <a href="https://github.com/johngilbert2000" target="_blank"><i className="fab fa-github fa-3x"></i></a>
+                    <p className="github-label">My GitHub</p>
+                </div>
             </div>
-            <div className="icon-container">
-                <a href="https://github.com/johngilbert2000" target="_blank"><i className="fab fa-github fa-3x"></i></a>
-                <p className="github-label">My GitHub</p>
-            </div>
+
         </div>
     );
 }

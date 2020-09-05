@@ -11,15 +11,6 @@ import Contact from './components/contact/Contact';
 import Resume from './components/resume/Resume';
 import Page404 from './components/Page404';
 
-import Block from './components/Block';
-
-import about_me from './images/about_me.jpg';
-import about_bg from './images/about_bg.jpg';
-import building_side from './images/building_side.png';
-import code_shot from './images/code_shot.png';
-import main_bg from './images/main_bg2.png';
-import navbar_drip from './images/navbar_drip.jpeg';
-import smoke from './images/smoke.jpeg';
 import { Switch, Route, BrowserRouter as Router } from 'react-router-dom';
 import StoreProvider from './components/storeContext';
 
