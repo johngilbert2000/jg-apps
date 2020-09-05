@@ -55,7 +55,7 @@ const Banner: React.FunctionComponent = () => {
       (lang==="chinese_traditional") && (
         <div className="cover" >
           <Fade duration={1500}>
-          <motion.h1 className="Title" initial={coverInit} animate={coverFinal} transition={trans} >
+          <motion.h1 className="Title-cn" initial={coverInit} animate={coverFinal} transition={trans} >
             探索 <br />成就 <br />超越
           </motion.h1>
           <motion.h2 className="Title2" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
@@ -67,7 +67,7 @@ const Banner: React.FunctionComponent = () => {
       (lang==="chinese_simplified") && (
         <div className="cover" >
           <Fade duration={1500}>
-          <motion.h1 className="Title" initial={coverInit} animate={coverFinal} transition={trans} >
+          <motion.h1 className="Title-cn" initial={coverInit} animate={coverFinal} transition={trans} >
             探索 <br /> 成就 <br /> 超越
           </motion.h1>
           <motion.h2 className="Title2" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
