@@ -28,29 +28,29 @@ const Resume: React.FunctionComponent = () => {
         ) || (lang==="spanish") && (
             <div className="resume">
                 <div className="content">
-                    <h1>Resume</h1>
+                    <h1>Currículum</h1>
                 </div>
                 <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
 
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
                 <div className="btn-container">
-                    <button className="btn draw-border">Download</button>
+                    <button className="btn draw-border">Descargar</button>
                 </div>
                 <div className="fader"></div>
             </div>
-            
+
         ) || (lang==="chinese_traditional") && (
             <div className="resume">
                 <div className="content">
-                    <h1>Resume</h1>
+                    <h1>簡歷</h1>
                 </div>
                 <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
 
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
                 <div className="btn-container">
-                    <button className="btn draw-border">Download</button>
+                    <button className="btn draw-border">下載</button>
                 </div>
                 <div className="fader"></div>
             </div>
@@ -58,14 +58,14 @@ const Resume: React.FunctionComponent = () => {
         ) || (lang==="chinese_simplified") && (
             <div className="resume">
                 <div className="content">
-                    <h1>Resume</h1>
+                    <h1>简历</h1>
                 </div>
                 <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
 
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
                 <div className="btn-container">
-                    <button className="btn draw-border">Download</button>
+                    <button className="btn draw-border">下载</button>
                 </div>
                 <div className="fader"></div>
             </div>

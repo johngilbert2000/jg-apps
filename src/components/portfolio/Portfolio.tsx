@@ -56,15 +56,16 @@ const Portfolio: React.FunctionComponent = () => {
 
 
     const cardNames_spanish: string[] = [
-        "Dengue Prediction",
+        "Dengue Predicción",
         "Nested Lookahead",
-        "Sentiment140 Analysis",
-        "Bacteriocin Sequence Prediction",
-        "Quantum Phase Estimation",
-        "KDE Implementation",
-        "OS Scheduler",
-        "Asynchronous Federated Learning",
-        "React Portfolio",
+        "Análisis de Sentiment140",
+        "Predicción de las Secuencias de Bacteriocinas",
+        "Estimación de Fase Cuántica",
+        "KDE Implementación",
+        "Planificador de Sistema Operativo",
+        "Aprendimiento Federado Asincrónico",
+        "Portafolio con React",
+
     ]
 
     const cardDescriptions_spanish: string[] = [
@@ -81,15 +82,15 @@ const Portfolio: React.FunctionComponent = () => {
 
 
     const cardNames_chinese_traditional: string[] = [
-        "Dengue Prediction",
+        "登革熱預測",
         "Nested Lookahead",
-        "Sentiment140 Analysis",
-        "Bacteriocin Sequence Prediction",
-        "Quantum Phase Estimation",
-        "KDE Implementation",
-        "OS Scheduler",
-        "Asynchronous Federated Learning",
-        "React Portfolio",
+        "Sentiment140分析",
+        "細菌素序列預測",
+        "量子相預測",
+        "KDE做法",
+        "作業系統排程",
+        "非同步的聯邦學習",
+        "React的網站",
     ]
 
     const cardDescriptions_chinese_traditional: string[] = [
@@ -106,15 +107,15 @@ const Portfolio: React.FunctionComponent = () => {
 
 
     const cardNames_chinese_simplified: string[] = [
-        "Dengue Prediction",
+        "登革热预测",
         "Nested Lookahead",
-        "Sentiment140 Analysis",
-        "Bacteriocin Sequence Prediction",
-        "Quantum Phase Estimation",
-        "KDE Implementation",
-        "OS Scheduler",
-        "Asynchronous Federated Learning",
-        "React Portfolio",
+        "Sentiment140分析",
+        "细菌素序列预测",
+        "量子相预测",
+        "KDE做法",
+        "作业系统排程",
+        "非同步的联邦学习",
+        "React的网站",
     ]
 
     const cardDescriptions_chinese_simplified: string[] = [
@@ -203,7 +204,15 @@ const Portfolio: React.FunctionComponent = () => {
 
             <div className="portfolio">
                 <div className="Title">
-                    <h1>Portfolio</h1>
+                    {(lang==="english") && (
+                        <h1>Portfolio</h1>
+                    ) || (lang==="spanish") && (
+                        <h1>Portafolio</h1>
+                    ) || (lang==="chinese_traditional") && (
+                        <h1>專案</h1>
+                    ) || (lang==="chinese_simplified") && (
+                        <h1>专案</h1>
+                    )}
                 </div>
                 <div className="content">
                     {cardNames.map((name, idx) => 
@@ -214,17 +223,21 @@ const Portfolio: React.FunctionComponent = () => {
                         initial={cardInit} animate={cardFinal} transition={{...trans, delay: 0.1*idx}}
                         onClick={() => expandCard(idx)}
                         whileTap={{scale: 0.94}}>
-                            <motion.h2>{name}</motion.h2>
-
+                            {(lang==="english") && (
+                                <motion.h2>{name}</motion.h2>
+                            ) || (lang==="spanish") && (
+                                <motion.h2>{cardNames_spanish[idx]}</motion.h2>
+                            ) || (lang==="chinese_traditional") && (
+                                <motion.h2>{cardNames_chinese_traditional[idx]}</motion.h2>
+                            ) || (lang==="chinese_simplified") && (
+                                <motion.h2>{cardNames_chinese_simplified[idx]}</motion.h2>
+                            )}
                             {fade && (
                                 <div className="scroll-me">
                                     <div className="long-content">
-
                                         <p className="card-info"></p>
-
                                     </div>
                                 </div>
-                                    
                             ) }
                             {fade && (
                                 <div className="X"><h1>&times;</h1></div>
@@ -245,23 +258,44 @@ const Portfolio: React.FunctionComponent = () => {
                             )}
                             <div className="btn-wrapper">
                                 <a href="https://github.com/johngilbert2000" target="_blank">
-                                    <button className="btn">View on Github</button>
+                                    {(lang==="english") && (
+                                       <div>
+                                            <button className="btn">View on Github</button>
+                                        </div>
+                                    ) || (lang==="spanish") && (
+                                       <div>
+                                            <button className="btn">Ver en Github</button>
+                                        </div>
+                                    ) || (lang==="chinese_traditional") && (
+                                       <div>
+                                            <button className="btn">在Github看</button>
+                                        </div>
+                                    ) || (lang==="chinese_simplified") && (
+                                       <div>
+                                            <button className="btn">在Github看</button>
+                                        </div>
+                                    )}
+ 
                                 </a>
                             </div>
                         </motion.div>
                     )}
-
-
                     { fade && (
-                        // <Fade>
-                            <motion.div className="card-cover" initial={{opacity: 0}} animate={{opacity: 1}}></motion.div>
-                        // </Fade>
+                        <motion.div className="card-cover" initial={{opacity: 0}} animate={{opacity: 1}}></motion.div>
                     )}
-
                 </div>
                 <div className="icon-container">
                     <a href="https://github.com/johngilbert2000" target="_blank"><i className="fab fa-github fa-3x"></i></a>
-                    <p className="github-label">My GitHub</p>
+                    
+                    {(lang==="english") && (
+                        <p className="github-label">My GitHub</p>
+                    ) || (lang==="spanish") && (
+                        <p className="github-label">Mi GitHub</p>
+                    ) || (lang==="chinese_traditional") && (
+                        <p className="github-label">我的GitHub</p>
+                    ) || (lang==="chinese_simplified") && (
+                        <p className="github-label">我的GitHub</p>
+                    )}
                 </div>
             </div>
 
