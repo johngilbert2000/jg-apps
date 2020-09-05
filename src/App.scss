@@ -202,7 +202,14 @@ body, input[type="text"], input[type="email"], textarea {
       overflow: hidden;
       color: $dark;
       margin: 0;
+      transition: all 0.1s ease-in-out;
+      transform: translate(-50px, 0);
       // display: none;
+    }
+
+    @media screen and (max-width: 549px) {
+      display: none;
+      transform: scale(0.9);
     }
     
 
@@ -247,7 +254,6 @@ body, input[type="text"], input[type="email"], textarea {
     background-color: $light;
     margin: 5px;
     overflow: hidden;
-
 
     // position: absolute;
     // top: 15px;
@@ -348,7 +354,7 @@ body, input[type="text"], input[type="email"], textarea {
 
 .selection {
   position: absolute;
-  top: 16px;
+  top: 14px; //16px
   right: 3px;
   border-radius: $default-radius;
   font-variant: small-caps;
@@ -356,16 +362,20 @@ body, input[type="text"], input[type="email"], textarea {
   overflow: hidden;
   text-overflow: unset;
   justify-content: left;
-  padding-left: 5px;
+  padding-left: 8px; // 5px
+  padding-right: 0px; // 5px
+  padding-top: 3px;
   color: $light;
-  transition: all 0.4s ease-in-out;
+  // transition: all 0.4s ease-in-out;
+  transition: all 0.34s ease-in-out; // 0.7
   opacity: 1;
 
+  
   @media screen and (max-width: $media-size) {
     // transform: translate(50%, 0);
     transform: translate(-50px, -10px);
     
-    transition: all 0.7s ease-in-out; // 0.7
+    transition: all 0.2s ease-in-out; // 0.7
     opacity: 1; // 0
   }
 
@@ -384,6 +394,12 @@ body, input[type="text"], input[type="email"], textarea {
   outline: none;
   font-variant: small-caps;
 
+  padding-right: 0px;
+  padding-left: 3px;
+
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
 
 }
 
@@ -397,6 +413,7 @@ body, input[type="text"], input[type="email"], textarea {
   line-height: 45px;
   pointer-events: none;
   font-variant: small-caps;
+
 }
 
 .selection:hover::before {
@@ -1574,6 +1591,9 @@ body, input[type="text"], input[type="email"], textarea {
   width: 100%;
   padding: 1rem;
 
+  a {
+    text-decoration: none;
+  }
 
   .btn {
     @include btn-border-drawing(#58afd1, $bright, 4px, top, left);

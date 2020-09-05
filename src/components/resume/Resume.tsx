@@ -2,6 +2,7 @@ import React, { useContext } from 'react';
 import {motion} from 'framer-motion';
 
 import resume from '../../images/resume.png';
+// import resumePDF from '../../images/Resume.pdf';
 import { StoreContext } from '../storeContext';
 
 const Resume: React.FunctionComponent = () => {
@@ -16,12 +17,15 @@ const Resume: React.FunctionComponent = () => {
                     <h1>Resume</h1>
                 </div>
                 <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
-
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
-                <div className="btn-container">
-                    <button className="btn draw-border">Download</button>
-                </div>
+
+                <a href="./Resume.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
+                        <button className="btn draw-border">Download</button>
+                    </div>
+                </a>
+
                 <div className="fader"></div>
             </div>
 
@@ -31,12 +35,15 @@ const Resume: React.FunctionComponent = () => {
                     <h1>Currículum</h1>
                 </div>
                 <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
-
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
-                <div className="btn-container">
-                    <button className="btn draw-border">Descargar</button>
-                </div>
+
+                <a href="./Resume.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
+                        <button className="btn draw-border">Descargar</button>
+                    </div>
+                </a>
+
                 <div className="fader"></div>
             </div>
 
@@ -46,12 +53,15 @@ const Resume: React.FunctionComponent = () => {
                     <h1>簡歷</h1>
                 </div>
                 <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
-
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
-                <div className="btn-container">
-                    <button className="btn draw-border">下載</button>
-                </div>
+
+                <a href="./Resume.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
+                        <button className="btn draw-border">下載</button>
+                    </div>
+                </a>
+
                 <div className="fader"></div>
             </div>
 
@@ -64,9 +74,13 @@ const Resume: React.FunctionComponent = () => {
 
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
-                <div className="btn-container">
-                    <button className="btn draw-border">下载</button>
-                </div>
+
+                <a href="./Resume.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
+                        <button className="btn draw-border">下载</button>
+                    </div>
+                </a>
+
                 <div className="fader"></div>
             </div>
         )}
