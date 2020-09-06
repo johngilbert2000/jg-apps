@@ -209,9 +209,9 @@ const Portfolio: React.FunctionComponent = () => {
                     ) || (lang==="spanish") && (
                         <h1>Portafolio</h1>
                     ) || (lang==="chinese_traditional") && (
-                        <h1>專案</h1>
+                        <h1 className="cn">專案</h1>
                     ) || (lang==="chinese_simplified") && (
-                        <h1>专案</h1>
+                        <h1 className="cn">专案</h1>
                     )}
                 </div>
                 <div className="content">
@@ -228,9 +228,9 @@ const Portfolio: React.FunctionComponent = () => {
                             ) || (lang==="spanish") && (
                                 <motion.h2>{cardNames_spanish[idx]}</motion.h2>
                             ) || (lang==="chinese_traditional") && (
-                                <motion.h2>{cardNames_chinese_traditional[idx]}</motion.h2>
+                                <motion.h2 className="cn">{cardNames_chinese_traditional[idx]}</motion.h2>
                             ) || (lang==="chinese_simplified") && (
-                                <motion.h2>{cardNames_chinese_simplified[idx]}</motion.h2>
+                                <motion.h2 className="cn">{cardNames_chinese_simplified[idx]}</motion.h2>
                             )}
                             {fade && (
                                 <div className="scroll-me">
@@ -252,9 +252,9 @@ const Portfolio: React.FunctionComponent = () => {
                             ) || (lang==="spanish") && (
                                 <p>{cardDescriptions_spanish[selectedID]}</p>
                             ) || (lang==="chinese_traditional") && (
-                                <p>{cardDescriptions_chinese_traditional[selectedID]}</p>
+                                <p className="cn">{cardDescriptions_chinese_traditional[selectedID]}</p>
                             ) || (lang==="chinese_simplified") && (
-                                <p>{cardDescriptions_chinese_simplified[selectedID]}</p>
+                                <p className="cn">{cardDescriptions_chinese_simplified[selectedID]}</p>
                             )}
                             <div className="btn-wrapper">
                                 <a href="https://github.com/johngilbert2000" target="_blank">

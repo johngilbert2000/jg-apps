@@ -58,7 +58,7 @@ const PythonBlock: React.FunctionComponent = () => {
           </Fade>
         </motion.div>
       ) || (lang==="chinese_traditional") && (
-        <motion.div className="content Title" initial={coverInit} animate={coverFinal} transition={trans}>
+        <motion.div className="content Title cn" initial={coverInit} animate={coverFinal} transition={trans}>
           <Fade damping={1.5} delay={300} fraction={0.4} duration={1500}>
           <motion.p initial={coverInit} animate={coverFinal} transition={{...trans, delay: 1}}>
             對<span>自然語言處理</span>、<span>圖像分類</span>、以及<span>表格數據分析</span>都有經驗。
@@ -71,7 +71,7 @@ const PythonBlock: React.FunctionComponent = () => {
           </Fade>
         </motion.div>
       ) || (lang==="chinese_simplified") && (
-        <motion.div className="content Title" initial={coverInit} animate={coverFinal} transition={trans}>
+        <motion.div className="content Title cn" initial={coverInit} animate={coverFinal} transition={trans}>
           <Fade damping={1.5} delay={300} fraction={0.4} duration={1500}>
           <motion.p initial={coverInit} animate={coverFinal} transition={{...trans, delay: 1}}>
             对<span>自然语言处理</span>、<span>图像分析</span>、以及<span>表格数据分析</span>都有经验。

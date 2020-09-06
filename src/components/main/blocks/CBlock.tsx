@@ -44,7 +44,7 @@ const CBlock: React.FunctionComponent = () => {
             </Fade>
           </div>
         ) || (lang==="chinese_traditional") && (
-          <div className="content Title">
+          <div className="content Title cn">
             <Fade delay={500}>
             <p>
               我改過和編輯過 <span>Linux 的核心</span>。程式表現重要時，我不怕用 <span>C</span> 來寫程式。
@@ -59,7 +59,7 @@ const CBlock: React.FunctionComponent = () => {
             </Fade>
           </div>
         ) || (lang==="chinese_simplified") && (
-          <div className="content Title">
+          <div className="content Title cn">
             <Fade delay={500}>
             <p>
               我改过和编辑过 <span>Linux 的核心</span>。程序表现重要时，我不怕用 <span>C</span>

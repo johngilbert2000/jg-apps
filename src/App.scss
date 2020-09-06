@@ -15,7 +15,7 @@ $highlight-light: $primary3; // rgb(0, 63, 199); // primary3 #003BAE
 $highlight-dark: $primary2;
 $bright: #f14b32;
 $default-radius: 0.8em;
-$media-size: 550px; //550px
+$media-size: 600px; //550px
 
 $darkblue1: rgb(0,62,128);
 $darkblue2: rgb(40, 41, 128);
@@ -36,6 +36,10 @@ body, input[type="text"], input[type="email"], textarea {
   line-height: 1.4;
   // letter-spacing: 1.1px;
   background-color: $dark;
+
+  @media screen and (max-width: $media-size) {
+    font-size: 1rem;
+  }
 }
 
 .main {
@@ -179,6 +183,8 @@ body, input[type="text"], input[type="email"], textarea {
     }
   }
 
+
+
   .Pages {
     // padding-left: 50%;
     margin-top: 4px;
@@ -211,9 +217,29 @@ body, input[type="text"], input[type="email"], textarea {
       display: none;
       transform: scale(0.9);
     }
-    
 
   }
+  .es {
+    font-size: 16px;
+    word-spacing: -3px;
+    // margin: 0;
+    padding-top: 3px;
+
+    @media screen and (max-width: 850px) {
+      font-size: 14px;
+      li {
+        padding: 8px;
+      }
+    }
+    @media screen and (max-width: 660px) {
+      li {
+        padding: 2px;
+      }
+    }
+
+  }   
+
+
 
   .toggler {
     position: absolute;
@@ -689,11 +715,17 @@ body, input[type="text"], input[type="email"], textarea {
     max-width: 800px;
   }
 
+  .cn {
+    letter-spacing: 2px;
+  }
+
   span {
     color: $highlight-light;
   }
+}
 
-
+.cn {
+  letter-spacing: 2px;
 }
 
 .cover2 {
@@ -933,7 +965,7 @@ body, input[type="text"], input[type="email"], textarea {
   // justify-items: center;
   // text-align: center;
 
-  @media screen and (max-width: 550px) {
+  @media screen and (max-width: $media-size) {
     margin: 15px;
   }
 }
@@ -983,7 +1015,7 @@ body, input[type="text"], input[type="email"], textarea {
     // justify-items: center;
     // text-align: center;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: $media-size) {
       margin: 15px;
     }
   }
@@ -1008,7 +1040,7 @@ body, input[type="text"], input[type="email"], textarea {
     padding-bottom: 14%; // 11rem;
     padding-top: 4%;//6rem;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: $media-size) {
       padding-bottom: 17rem;
     }
   }
@@ -1770,7 +1802,7 @@ body, input[type="text"], input[type="email"], textarea {
     // justify-items: center;
     // text-align: center;
 
-    @media screen and (max-width: 550px) {
+    @media screen and (max-width: $media-size) {
       margin: 15px;
       margin-bottom: 0px;
     }

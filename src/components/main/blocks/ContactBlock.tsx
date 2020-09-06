@@ -83,7 +83,7 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-              <div className="card">
+              <div className="card cn">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   聯絡
                 </motion.h1>
@@ -100,7 +100,7 @@ const ContactBlock: React.FunctionComponent = () => {
             }
             {
               msgSent && (
-                <div className="card">
+                <div className="card cn">
                   <div className="message-sent">
                     <motion.h1 initial={{y:100}} animate={{y:0}} transition={{...trans, delay: 0}}>訊息已發送</motion.h1>
                     <p><motion.i className="far fa-check-circle fa-6x" initial={{opacity:0, scale: 0.5}} animate={{opacity:1, scale: 1}} transition={{delay: 0.3, duration: 0.4}}></motion.i></p>

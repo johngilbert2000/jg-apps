@@ -89,7 +89,7 @@ const About: React.FunctionComponent = () => {
                     </motion.div>
                 </div>
             ) || (lang==="chinese_traditional") && (
-                <div className="content-container">
+                <div className="content-container cn">
                     <motion.div className="content" initial={contentInitial} animate={final} exit={contentInitial} transition={{duration: 0.1}} >
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans} whileHover={hover}>
                             您好，我叫 <span>John Gilbert</span>，還有我對科學和科技都熱烈感興趣。
@@ -103,7 +103,7 @@ const About: React.FunctionComponent = () => {
                     </motion.div>
                 </div>
             ) || (lang==="chinese_simplified") && (
-                <div className="content-container">
+                <div className="content-container cn">
                     <motion.div className="content" initial={contentInitial} animate={final} exit={contentInitial} transition={{duration: 0.1}} >
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans} whileHover={hover}>
                             您好，我叫 <span>John Gilbert</span>，还有我对科学和科技都热烈感兴趣。

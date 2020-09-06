@@ -63,7 +63,7 @@ const JSBlock: React.FunctionComponent = () => {
           </div>
         </div>
       ) || (lang==="chinese_traditional") && (
-        <div className="content Title">
+        <div className="content Title cn">
           <div className="">
             <div className="">
               <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
@@ -81,7 +81,7 @@ const JSBlock: React.FunctionComponent = () => {
           </div>
         </div>
       ) || (lang==="chinese_simplified") && (
-        <div className="content Title">
+        <div className="content Title cn">
           <div className="">
             <div className="">
               <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
