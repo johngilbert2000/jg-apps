@@ -217,13 +217,13 @@ body, input[type="text"], input[type="email"], textarea {
 
   .toggler {
     position: absolute;
-    top: 0;
-    right: 3px;
+    top: -5px;
+    right: 6px;
     cursor: pointer;
     width: 40px;
     height: 40px;
-    z-index: 2;
-    opacity: 1; // 0 TOGGLER BOX
+    z-index: 100;//2
+    opacity: 0; // 0 TOGGLER BOX
 
     @media screen and (min-width: $media-size) {
       display: none;
@@ -235,17 +235,37 @@ body, input[type="text"], input[type="email"], textarea {
     & + .burger .line1 {
       transform: rotate(130deg);
       // width: 20px;
+      margin: 8px;
+      width: 5px;
+      // margin-right: 10px;
+      margin-left: 4px;
+      margin-top: 20px;
     }
     & + .burger .line2 {
       transform: rotate(260deg);
+      // transform: translate(0, 2px);
+      margin: -14px;
       opacity: 0;
     }
     & + .burger .line3 {
       transform: rotate(-130deg);
-      padding: -15px; //-15
-      margin-top: -15px;
+      margin: 2px;
+      width: 5px;
+      margin-right: 20px;
+      margin-top: 16px;
+      margin-left: 14px;
+      // padding: -15px; //-15
+      // margin-top: -15px;
     }
+
     
+  }
+
+  .burger-bun {
+    position: absolute;
+    top: 7px;
+    right: 0px;
+    height: 60px;
   }
 
   .burger div {
@@ -366,16 +386,18 @@ body, input[type="text"], input[type="email"], textarea {
   padding-right: 0px; // 5px
   padding-top: 3px;
   color: $light;
-  // transition: all 0.4s ease-in-out;
-  transition: all 0.34s ease-in-out; // 0.7
+  transition: all 0.4s ease-in-out;
+  // transition: all 0.34s ease-in-out; // 0.7
+  // transition: all 4s ease-out;
   opacity: 1;
 
   
   @media screen and (max-width: $media-size) {
     // transform: translate(50%, 0);
-    transform: translate(-50px, -10px);
-    
-    transition: all 0.2s ease-in-out; // 0.7
+    transform: translate(0px, -10px); // -50px -10px
+    left: 60px;
+    right: 60px;
+    // transition: all 0.1s ease-out; // 0.7 0.2
     opacity: 1; // 0
   }
 
@@ -393,6 +415,7 @@ body, input[type="text"], input[type="email"], textarea {
   appearance: button;
   outline: none;
   font-variant: small-caps;
+  cursor: pointer;
 
   padding-right: 0px;
   padding-left: 3px;
@@ -427,21 +450,30 @@ body, input[type="text"], input[type="email"], textarea {
 }
 
 .menu {
-  background: linear-gradient(to bottom, rgb(6, 43, 57), rgb(20, 55, 52));//  rgb(0, 62, 128);
+  // background: linear-gradient(to bottom, rgb(6, 43, 57), rgb(20, 55, 52));//  rgb(0, 62, 128);
+  background: $dark2;
   position: absolute;
   // margin-top: -540px; // 40px
-  margin-top: 40px;
+  // margin-top: 40px;
   width: 100%;
-  height: 85%;
+  height: 100%;
   // z-index: 3;
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   overflow: visible;
-  padding: 4rem;
+  padding: 0rem;
   transition: all 0.6s ease-in-out;
   border-radius: 5rem;
+  // overflow: hidden;
+
+  .menu-items {
+    padding-top: 5rem;
+    overflow-y: scroll;
+    font-size: 16px;
+    // overflow: hidden;
+  }
 
 
   // NOT ACTIVE
@@ -456,6 +488,11 @@ body, input[type="text"], input[type="email"], textarea {
   // transform: opacity(0);
   // border-radius: $default-radius;
 
+  li {
+    padding: 5px;
+
+  }
+
   @media screen and (min-width: $media-size) {
     opacity: 0;
     display: hidden;
@@ -468,10 +505,10 @@ body, input[type="text"], input[type="email"], textarea {
     list-style-type: none;
     transition: all 0.3s ease-in-out;
     
-    padding: 1rem;
+    // padding: 0rem;
     // text-align: center;
     overflow: visible;
-    margin: 1.2rem;
+    // margin: 1.2rem;
     border-radius: 20rem;
     letter-spacing: 1px;
     font-variant: small-caps;
@@ -509,14 +546,24 @@ body, input[type="text"], input[type="email"], textarea {
     opacity: 1;
     display: flex;
     // z-index: 3;
-    z-index: 99;
-    padding-top: 15rem;
-    padding-bottom: 20rem;
-    margin-top: 40px;
+    z-index: 80;
+    // padding-top: 15rem;
+    // padding-bottom: 20rem;
+    // margin-top: -25px;
+    margin-top: -25px;
     border-radius: 0;
     scale: 1;
     translate: 0;
     rotate: 0deg;   
+    // overflow: hidden;
+  }
+
+  @media screen and (max-height: 400px) {
+    margin-top: -30px;
+    li, a {
+      padding-bottom: 3px;
+      margin: 0px;
+    }
   }
 
 }
@@ -561,6 +608,7 @@ body, input[type="text"], input[type="email"], textarea {
     font-weight: normal;
     box-shadow: 0px 0px 3px $dark;
     transition: all 1s ease-out;
+    overflow: hidden;
 
     &:hover {
       box-shadow: 0px 0px 15px $dark;
@@ -598,11 +646,21 @@ body, input[type="text"], input[type="email"], textarea {
     padding-right: 2px;
     font-weight: normal;
     box-shadow: 0px 0px 2px $dark;
-    transition: all 1s ease-out;
+    transition: all 0.5s ease-out;
 
     &:hover {
       box-shadow: 0px 0px 10px $dark;
     }
+
+
+  }
+  .cn {
+    letter-spacing: 4px;
+    max-width: 800px;
+    transition: all 1s ease-out;
+  }
+  .es {
+    max-width: 600px;
   }
 
   span {
@@ -622,10 +680,13 @@ body, input[type="text"], input[type="email"], textarea {
     max-width: 40rem;
     padding: 2rem;
     text-align: center;
+    transition: all 1s ease-out;
   }
 
   .content {
     padding: 5rem 0rem;
+    transition: all 1s ease-out;
+    max-width: 800px;
   }
 
   span {
@@ -990,50 +1051,89 @@ body, input[type="text"], input[type="email"], textarea {
 
 }
 
+// .bigNav {
+//   z-index: 0;
+//   opacity: 1;
+//   transition: all 1s ease;
+//   @media screen and (max-width: $media-size) and (min-height: 600px) {
+//     opacity: 1;
+//     z-index: 90;
+//   }
+// }
+// .smallNav {
+//   z-index: 0;
+//   opacity: 0;
+//   transition: all 1s ease;
+//   @media screen and (max-width: $media-size) and (max-height: 600px) {
+//     opacity: 1;
+//     z-index: 90;
+//   }
+// }
+
 .BottomNav {
   position: fixed;
   bottom: 0;
   left: 0;
   // padding: 10rem;
   width: 100%;
-  height: 0rem;
+  height: 3rem;
   background-color: $dark;
+  overflow-y: hidden;
 
   transition: all 0.5s ease-in-out;
   visibility: hidden;
   opacity: 0;
   align-items: center;
   justify-content: space-between;
-  z-index: 3;
+  z-index: 99; //3
 
   i {
     opacity: 0;
-    padding-right: 20px;
+    // padding-right: 20px;
   }
 
   a {
     color: rgb(175, 188, 211);
+    padding-top: 1rem;
   }
 
   @media screen and (max-width: $media-size) {
     opacity: 1;
-    height: 4.5rem;
+    // height: 4.5rem;
     visibility: visible;
-    padding: 1rem;
+    // padding: 1rem;
     display: flex;
     color: rgb(175, 188, 211);
+    // padding: 2.5rem 1rem;
+    height: 3.2rem;
+
+    a {
+      padding: 3rem 1rem;
+    }
 
     i {
       transition-delay: 0.5s;
       transition: opacity 2s ease-in-out;
       transition: color 0.3s ease-in-out;
       opacity: 1;
-      padding-right: 20px;
+      // padding-right: 20px;
+      padding: 3rem 0rem;
+      padding-right: 1rem;
 
       &:hover {
 
         color: $secondary;
         text-shadow: 0px 0px 2px $secondary;
+      }
+    }
+    transition: all 1s ease-out;
+
+    @media screen and (min-height: $media-size) {
+      height: 4.5rem;
+
+      transition: all 1s ease-out;
+      li, a {
+        transform: scale(1.8);
       }
     }
 

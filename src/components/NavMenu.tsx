@@ -189,18 +189,21 @@ const NavMenu: React.FunctionComponent = () => {
             </div>
 
             <div>
-            <input type="checkbox" className="toggler" onChange={handleCheck} />
-            <div className="burger">
-                <div className="line1"></div>
-                <div className="line2"></div>
-                <div className="line3"></div>
+            <div className="burger-bun">
+
+              <input type="checkbox" className="toggler" onChange={handleCheck} />
+              <div className="burger">
+                  <div className="line1"></div>
+                  <div className="line2"></div>
+                  <div className="line3"></div>
+              </div>
             </div>
             </div>
 
           </div>
 
           <div className="menu" style={menuStyle}>
-              <ul>
+              <ul className="menu-items">
                 {/* <li><a href="/">Main</a></li>
                 <li><a href="/about">About</a></li>
                 <li><a href="/portfolio">Portfolio</a></li>
@@ -228,20 +231,26 @@ const NavMenu: React.FunctionComponent = () => {
               </ul>
           </div>
 
-          <div className="BottomNav">
-            {/* <a href="/"><i className="fas fa-home fa-2x"></i></a>
-            <a href="/about"><i className="fas fa-address-card fa-2x"></i></a>
-            <a href="/portfolio"><i className="fas fa-folder-open fa-2x"></i></a>
-            <a href="/resume"><i className="fas fa-file-alt fa-2x"></i></a>
-            <a href="/contact"><i className="fas fa-envelope fa-2x"></i></a> */}
-
-            <Link to="/"><i className="fas fa-home fa-2x"></i></Link>
-            <Link to="/about"><i className="fas fa-address-card fa-2x"></i></Link>
-            <Link to="/portfolio"><i className="fas fa-folder-open fa-2x"></i></Link>
-            <Link to="/resume"><i className="fas fa-file-alt fa-2x"></i></Link>
-            <Link to="contact"><i className="fas fa-envelope fa-2x"></i></Link>
+          {/* <div className="bigNav">
+            <div className="BottomNav">
+                <Link to="/"><i className="fas fa-home fa-2x"></i></Link>
+                <Link to="/about"><i className="fas fa-address-card fa-2x"></i></Link>
+                <Link to="/portfolio"><i className="fas fa-folder-open fa-2x"></i></Link>
+                <Link to="/resume"><i className="fas fa-file-alt fa-2x"></i></Link>
+                <Link to="contact"><i className="fas fa-envelope fa-2x"></i></Link>
+            </div>
           </div>
-        </div>
+          <div className="smallNav"> */}
+            <div className="BottomNav">
+                <Link to="/"><i className="fas fa-home"></i></Link>
+                <Link to="/about"><i className="fas fa-address-card"></i></Link>
+                <Link to="/portfolio"><i className="fas fa-folder-open"></i></Link>
+                <Link to="/resume"><i className="fas fa-file-alt"></i></Link>
+                <Link to="contact"><i className="fas fa-envelope"></i></Link>
+            </div>
+          </div>
+
+        // </div>
 
     );
 }

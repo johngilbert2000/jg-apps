@@ -45,7 +45,7 @@ const Banner: React.FunctionComponent = () => {
           <motion.h1 className="Title" initial={coverInit} animate={coverFinal} transition={trans} >
             Explorar   Lograr   Superar
           </motion.h1>
-          <motion.h2 className="Title2" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
+          <motion.h2 className="Title2 es" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
             Contrata un desarrollador hábil en <span>inteligencia artificial, desarrollo web, </span> 
             y <span>investigación cientifica</span>
           </motion.h2>
@@ -58,7 +58,7 @@ const Banner: React.FunctionComponent = () => {
           <motion.h1 className="Title-cn" initial={coverInit} animate={coverFinal} transition={trans} >
             探索 <br />成就 <br />超越
           </motion.h1>
-          <motion.h2 className="Title2" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
+          <motion.h2 className="Title2 cn" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
             聘用對<span>人工智慧</span>、<span>網站編程</span>、以及<span>科學研究</span>有能力的編程者吧
           </motion.h2>
           </Fade>
@@ -70,7 +70,7 @@ const Banner: React.FunctionComponent = () => {
           <motion.h1 className="Title-cn" initial={coverInit} animate={coverFinal} transition={trans} >
             探索 <br /> 成就 <br /> 超越
           </motion.h1>
-          <motion.h2 className="Title2" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
+          <motion.h2 className="Title2 cn" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
             应聘对<span>人工智慧、网站编程</span>、以及<span>科学研究</span>有能力的编程者吧
           </motion.h2>
           </Fade>
