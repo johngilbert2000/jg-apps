@@ -22,7 +22,7 @@ const Resume: React.FunctionComponent = () => {
 
                 <a href="./Resume.pdf" download>
                     <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
-                        <button className="btn draw-border">Download</button>
+                        <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> Download</button>
                     </div>
                 </a>
 
@@ -40,7 +40,7 @@ const Resume: React.FunctionComponent = () => {
 
                 <a href="./Resume.pdf" download>
                     <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
-                        <button className="btn draw-border">Descargar</button>
+                        <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> Descargar</button>
                     </div>
                 </a>
 
@@ -58,7 +58,7 @@ const Resume: React.FunctionComponent = () => {
 
                 <a href="./Resume.pdf" download>
                     <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
-                        <button className="btn draw-border">下載</button>
+                        <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> 下載</button>
                     </div>
                 </a>
 
@@ -77,7 +77,7 @@ const Resume: React.FunctionComponent = () => {
 
                 <a href="./Resume.pdf" download>
                     <div className="btn-container" onClick={ () => window.open(require('../../images/Resume.pdf'), '_none')}>
-                        <button className="btn draw-border">下载</button>
+                        <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> 下载</button>
                     </div>
                 </a>
 

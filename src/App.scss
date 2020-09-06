@@ -15,7 +15,7 @@ $highlight-light: $primary3; // rgb(0, 63, 199); // primary3 #003BAE
 $highlight-dark: $primary2;
 $bright: #f14b32;
 $default-radius: 0.8em;
-$media-size: 600px; //550px
+$media-size: 620px; //550px
 
 $darkblue1: rgb(0,62,128);
 $darkblue2: rgb(40, 41, 128);
@@ -138,7 +138,7 @@ body, input[type="text"], input[type="email"], textarea {
   width: 100%;
   padding: 8px;
   height: 60px;
-  // height: 500px;
+  // height: 500px; /// CHANGE ME
   // overflow: auto;
   background: $dark;
   position: absolute;
@@ -196,7 +196,7 @@ body, input[type="text"], input[type="email"], textarea {
     // padding-left: 20%;
     @media screen and (min-width: $media-size) {
       padding-left: 70%; // 90%
-      padding-right: 100px;
+      padding-right: 104px;
       padding-left:0%;
     }
 
@@ -213,10 +213,10 @@ body, input[type="text"], input[type="email"], textarea {
       // display: none;
     }
 
-    @media screen and (max-width: 549px) {
-      display: none;
-      transform: scale(0.9);
-    }
+    // @media screen and (max-width: 549px) {
+    //   display: none;
+    //   transform: scale(0.9);
+    // }
 
   }
   .es {
@@ -225,13 +225,13 @@ body, input[type="text"], input[type="email"], textarea {
     // margin: 0;
     padding-top: 3px;
 
-    @media screen and (max-width: 850px) {
+    @media screen and (max-width: 890px) {
       font-size: 14px;
       li {
         padding: 8px;
       }
     }
-    @media screen and (max-width: 660px) {
+    @media screen and (max-width: 680px) {
       li {
         padding: 2px;
       }
@@ -250,6 +250,8 @@ body, input[type="text"], input[type="email"], textarea {
     height: 40px;
     z-index: 100;//2
     opacity: 0; // 0 TOGGLER BOX
+    // opacity: 1;
+    display: block; // FIXES A BUG AT 550px WIDTH
 
     @media screen and (min-width: $media-size) {
       display: none;
@@ -359,7 +361,7 @@ body, input[type="text"], input[type="email"], textarea {
 
     @media screen and (max-width: 750px) {
       padding: 0rem 0.7rem;
-      font-size: 15px;
+      font-size: 14px;
     }
   }
 }
@@ -415,7 +417,7 @@ body, input[type="text"], input[type="email"], textarea {
   transition: all 0.4s ease-in-out;
   // transition: all 0.34s ease-in-out; // 0.7
   // transition: all 4s ease-out;
-  opacity: 1;
+  opacity: 0;
 
   
   @media screen and (max-width: $media-size) {
@@ -434,7 +436,7 @@ body, input[type="text"], input[type="email"], textarea {
   color: $light;
   // padding: 5px;
   padding-top: 3px;
-  width: 80px;
+  // width: 80px;
   border: none;
   font-size: 18px;
   -webkit-appearance: button;
@@ -443,6 +445,7 @@ body, input[type="text"], input[type="email"], textarea {
   font-variant: small-caps;
   cursor: pointer;
 
+  width: 90%;
   padding-right: 0px;
   padding-left: 3px;
 
@@ -474,6 +477,114 @@ body, input[type="text"], input[type="email"], textarea {
   font-variant: small-caps;
   font-size: 20px;
 }
+
+.selection2 {
+  position: absolute;
+  top: 14px; //16px
+  // left: 13px;
+  right: 3px;
+  border-radius: $default-radius;
+  font-variant: small-caps;
+  background-color: rgb(53, 52, 55);
+  overflow: hidden;
+  text-overflow: unset;
+  justify-content: left;
+  // padding-left: 8px; // 5px
+  padding-right: 0px; // 5px
+  padding-top: 3px;
+  color: $light;
+  transition: all 0.4s ease-in-out;
+  border: none;
+  padding: 2px;
+  cursor: pointer;
+  // padding-right: 20px;
+  // transition: all 0.34s ease-in-out; // 0.7
+  // transition: all 4s ease-out;
+  transition: all 0.5s ease;
+  opacity: 1;
+
+  font-size: 16px;
+  width: 110px;
+  height: 30px;
+
+
+  &:hover {
+    background-color: rgb(64, 63, 67);
+  }
+
+  i {
+    // padding-right: 5px;
+    padding: 0px 4px;
+    translate: 0px 2px;
+  }
+  
+  @media screen and (max-width: $media-size) {
+    // transform: translate(50%, 0);
+    transform: translate(0px, -10px); // -50px -10px
+    left: 60px;
+    right: 60px;
+    // transition: all 0.1s ease-out; // 0.7 0.2
+    opacity: 1; // 0
+
+    display: none;
+  }
+
+}
+
+.opts {
+  position: absolute;
+  top: 60px;
+  right: 0px;
+  z-index: 20;
+  width: 115px;
+  color: $light3;
+  border-radius: 1px;
+  opacity: 0;
+  // display: none;
+  transition: all 0.2s ease-in-out;
+  transform: translate(0, -50px);
+  font-variant: small-caps;
+
+  // left: 15px;
+  // padding-right: 1rem;
+  // padding-left: 1rem;
+  // opacity: 0;
+  // height: 0;
+  // top: 60px;
+  // margin-left: -5px;
+  // margin-right: 5px;
+  
+
+  div {
+
+    animation: backInDown;//bounceInDown;
+    animation-duration: 0.3s;
+    cursor: pointer;
+    margin: 1px 5px;
+    background: $dark;
+    padding: 5px 10px;
+    border-radius: 5px;
+    transition: all 0.2s ease;
+    &:hover {
+      background: rgb(40, 46, 65);// $dark2; // 40 55 65
+      color: $light2;
+      transform: translate(-4px, 0px);
+    }
+  }
+}
+.opts-active {
+  opacity: 1;
+  display: block;
+  transform: translate(0, 0px);
+  animation: bounce;
+}
+.opts-inactive {
+  display: none;
+}
+
+
+
+
 
 .menu {
   // background: linear-gradient(to bottom, rgb(6, 43, 57), rgb(20, 55, 52));//  rgb(0, 62, 128);
@@ -1000,7 +1111,8 @@ body, input[type="text"], input[type="email"], textarea {
     @include btn-border-drawing(#58afd1, $bright, 4px, top, left);
     margin: 20px;
     // margin-top: 1em;
-    margin-bottom: 0.5rem;
+    // margin-bottom: 0.5rem;
+    margin-bottom: 5rem;
 
     &:hover {
       box-shadow: 0.1em 0.1em 5px 1px rgba(0,0,0,0.3);
@@ -1037,7 +1149,7 @@ body, input[type="text"], input[type="email"], textarea {
     // padding: 0px;
     overflow-y: hidden;
     // padding-bottom: 15rem;
-    padding-bottom: 14%; // 11rem;
+    padding-bottom: 11rem; // 11rem; 14% 18%
     padding-top: 4%;//6rem;
 
     @media screen and (max-width: $media-size) {
@@ -1315,6 +1427,12 @@ body, input[type="text"], input[type="email"], textarea {
       display: flex;
       padding-top: 2rem;
       padding-bottom: 5rem;
+
+      i {
+        scale: 1.2;
+        transform: translate(5px,0);
+      }
+      
     }
 
     @media screen and (max-width: $media-size) {
@@ -1788,6 +1906,11 @@ body, input[type="text"], input[type="email"], textarea {
     // margin-bottom: 0.5rem;
     z-index: 2;
     margin-bottom: 0px;
+
+    i {
+      scale: 1.5;
+      transform: translate(-4px, 2px);
+    }
 
     &:hover {
       box-shadow: 0.1em 0.1em 5px 1px rgba(0,0,0,0.3);

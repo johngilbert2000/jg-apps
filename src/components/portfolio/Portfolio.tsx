@@ -260,19 +260,19 @@ const Portfolio: React.FunctionComponent = () => {
                                 <a href="https://github.com/johngilbert2000" target="_blank">
                                     {(lang==="english") && (
                                        <div>
-                                            <button className="btn">View on Github</button>
+                                            <button className="btn">View on Github <i className="fas fa-code-branch"></i></button>
                                         </div>
                                     ) || (lang==="spanish") && (
                                        <div>
-                                            <button className="btn">Ver en Github</button>
+                                            <button className="btn">Ver en Github <i className="fas fa-code-branch"></i></button>
                                         </div>
                                     ) || (lang==="chinese_traditional") && (
                                        <div>
-                                            <button className="btn">在Github看</button>
+                                            <button className="btn">在 Github 看</button>
                                         </div>
                                     ) || (lang==="chinese_simplified") && (
                                        <div>
-                                            <button className="btn">在Github看</button>
+                                            <button className="btn">在 Github 看</button>
                                         </div>
                                     )}
  

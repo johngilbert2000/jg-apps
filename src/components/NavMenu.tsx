@@ -61,6 +61,42 @@ const NavMenu: React.FunctionComponent = () => {
     const trans = {type:"spring", duration: 3};
     const s = 0; // start
 
+    const selectedStyle = {background: 'rgb(50,55,65)', color: '#eee'}; // 40 55 65 // 10 20 30 // 60 65 75
+    const unselectedStyle = {background: '', color: ''};
+
+
+    // let langOpen: boolean = false;
+    let langActive: boolean = false;
+
+    const [langOpen, setLangOpen] = useState(false);
+
+    const langSelect = () => {
+      const langmenu = document.querySelector('.opts');
+      langmenu?.classList.toggle('opts-active');
+      if (!langOpen) { 
+        langmenu?.classList.toggle('opts-inactive'); 
+      }
+      if (langOpen) {
+        setTimeout(() => {langmenu?.classList.toggle('opts-inactive')}, 400);
+      }
+      setLangOpen(!langOpen);
+      // langOpen = !langOpen;
+    }
+    const langSelectOpen = () => {
+      if (!langOpen && !langActive) {
+        const langmenu = document.querySelector('.opts');
+        langActive = !langActive;
+        langmenu?.classList.toggle('opts-active');
+      }
+    }
+    const langSelectClose = () => {
+      if (langOpen || langActive) {
+        const langmenu = document.querySelector('.opts');
+        langActive = false;
+        langmenu?.classList.toggle('opts-active');
+      }
+    }
+
     navSlide();
     
     return (
@@ -119,6 +155,26 @@ const NavMenu: React.FunctionComponent = () => {
                 <option value="chinese_simplified">简体中文</option>
               </select>
             </div>
+
+            <button className="selection2" onClick={langSelect} 
+            style={langOpen ? {background: 'rgb(80,80,80)'} : {background: ''}}>
+            {/* // onMouseEnter={langSelectOpen}
+            // onMouseLeave={langSelectClose}> */}
+              <div>
+                <i className="fas fa-globe"></i> 
+                {(() => {
+                      switch (lang) {
+                        case "english":   return "English";
+                        case "spanish": return "Español";
+                        case "chinese_traditional":  return "繁體中文";
+                        case "chinese_simplified":  return "简体中文";
+                        default:      return "Select Language";
+                      }
+                    })()}
+                {langOpen ? <i id="#arrow" className="fas fa-angle-up"></i> : <i className="fas fa-angle-down"></i> }
+              </div>
+
+            </button>
 
             <div className="burger-bun">
               <input type="checkbox" className="toggler" id="box" onChange={handleCheck} />
@@ -193,6 +249,24 @@ const NavMenu: React.FunctionComponent = () => {
                 <Link to="/portfolio"><i className="fas fa-folder-open"></i></Link>
                 <Link to="/resume"><i className="fas fa-file-alt"></i></Link>
                 <Link to="contact"><i className="fas fa-envelope"></i></Link>
+            </div>
+            
+            <div className="opts opts-inactive">
+            {/* <Slide direction={'down'} damping={0.1} delay={1} duration={500}> */}
+              {/* <Bounce > */}
+              <div style={lang === "english" ? selectedStyle : unselectedStyle} 
+              onClick={() => setLang("english")}>English</div>
+
+              <div style={lang === "spanish" ? selectedStyle : unselectedStyle}
+               onClick={() => setLang("spanish")}>Español</div>
+
+              <div style={lang === "chinese_traditional" ? selectedStyle : unselectedStyle}
+               onClick={() => setLang("chinese_traditional")}>繁體中文</div>
+
+              <div style={lang === "chinese_simplified" ? selectedStyle : unselectedStyle}
+               onClick={() => setLang("chinese_simplified")}>简体中文</div>
+               {/* </Bounce> */}
+               {/* </Slide> */}
             </div>
           </div>
 
