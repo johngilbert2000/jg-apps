@@ -62,8 +62,7 @@ const CBlock: React.FunctionComponent = () => {
           <div className="content Title cn">
             <Fade delay={500}>
             <p>
-              我改过和编辑过 <span>Linux 的核心</span>。程序表现重要时，我不怕用 <span>C</span>
-              来写程序。
+              我改过和编辑过 <span>Linux 的核心</span>。程序表现重要时，我不怕用 <span>C</span> 来写程序。
             </p>
             <p>
               我试过很多不同的程序语言，比如 <span>Clojure、Haskell、Julia</span>、和 <span>Go</span>。

@@ -255,16 +255,16 @@ const NavMenu: React.FunctionComponent = () => {
             {/* <Slide direction={'down'} damping={0.1} delay={1} duration={500}> */}
               {/* <Bounce > */}
               <div style={lang === "english" ? selectedStyle : unselectedStyle} 
-              onClick={() => setLang("english")}>English</div>
+              onClick={() => {setLang("english"); setTimeout(() => langSelect(), 270);}}>English</div>
 
               <div style={lang === "spanish" ? selectedStyle : unselectedStyle}
-               onClick={() => setLang("spanish")}>Español</div>
+               onClick={() => {setLang("spanish"); setTimeout(() => langSelect(), 270);}}>Español</div>
 
               <div style={lang === "chinese_traditional" ? selectedStyle : unselectedStyle}
-               onClick={() => setLang("chinese_traditional")}>繁體中文</div>
+               onClick={() => {setLang("chinese_traditional"); setTimeout(() => langSelect(), 270);}}>繁體中文</div>
 
               <div style={lang === "chinese_simplified" ? selectedStyle : unselectedStyle}
-               onClick={() => setLang("chinese_simplified")}>简体中文</div>
+               onClick={() => {setLang("chinese_simplified"); setTimeout(() => langSelect(), 270);}}>简体中文</div>
                {/* </Bounce> */}
                {/* </Slide> */}
             </div>
