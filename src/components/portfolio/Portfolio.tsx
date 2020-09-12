@@ -30,6 +30,7 @@ const Portfolio: React.FunctionComponent = () => {
     const [cardValue, setCardValue] = useState("");
     // let fade: boolean = false;
 
+
     const cardNames: string[] = [
         "Dengue Prediction",
         "Nested Lookahead",
@@ -38,22 +39,9 @@ const Portfolio: React.FunctionComponent = () => {
         "Quantum Phase Estimation",
         "KDE Implementation",
         "OS Scheduler",
-        "Asynchronous Federated Learning",
+        "Django-Paypal Example",
         "React Portfolio",
     ]
-
-    const cardDescriptions: string[] = [
-        "Dengue Prediction description english",
-        "Nested Lookahead description english",
-        "Sentiment140 Analysis description english",
-        "Bacteriocin Sequence Prediction description english",
-        "Quantum Phase Estimation description english",
-        "KDE Implementation description english",
-        "OS Scheduler description english",
-        "Asynchronous Federated Learning description english",
-        "React Portfolio description english",
-    ]
-
 
     const cardNames_spanish: string[] = [
         "Dengue Predicción",
@@ -63,23 +51,10 @@ const Portfolio: React.FunctionComponent = () => {
         "Estimación de Fase Cuántica",
         "KDE Implementación",
         "Planificador de Sistema Operativo",
-        "Aprendimiento Federado Asincrónico",
+        "Ejemplo de Django-Paypal",
         "Portafolio con React",
 
     ]
-
-    const cardDescriptions_spanish: string[] = [
-        "Dengue Prediction description spanish",
-        "Nested Lookahead description spanish",
-        "Sentiment140 Analysis description spanish",
-        "Bacteriocin Sequence Prediction description spanish",
-        "Quantum Phase Estimation description spanish",
-        "KDE Implementation description spanish",
-        "OS Scheduler description spanish",
-        "Asynchronous Federated Learning description spanish",
-        "React Portfolio description spanish",
-    ]
-
 
     const cardNames_chinese_traditional: string[] = [
         "登革熱預測",
@@ -89,22 +64,9 @@ const Portfolio: React.FunctionComponent = () => {
         "量子相預測",
         "KDE做法",
         "作業系統排程",
-        "非同步的聯邦學習",
+        "Django-Paypal的例子",
         "React的網站",
     ]
-
-    const cardDescriptions_chinese_traditional: string[] = [
-        "Dengue Prediction description chinese traditional",
-        "Nested Lookahead description chinese traditional",
-        "Sentiment140 Analysis description chinese traditional",
-        "Bacteriocin Sequence Prediction description chinese traditional",
-        "Quantum Phase Estimation description chinese traditional",
-        "KDE Implementation description chinese traditional",
-        "OS Scheduler description chinese traditional",
-        "Asynchronous Federated Learning description chinese traditional",
-        "React Portfolio description chinese traditional",
-    ]
-
 
     const cardNames_chinese_simplified: string[] = [
         "登革热预测",
@@ -114,23 +76,118 @@ const Portfolio: React.FunctionComponent = () => {
         "量子相预测",
         "KDE做法",
         "作业系统排程",
-        "非同步的联邦学习",
+        "Django-Paypal的例子",
         "React的网站",
     ]
 
-    const cardDescriptions_chinese_simplified: string[] = [
-        "Dengue Prediction description chinese simplified",
-        "Nested Lookahead description chinese simplified",
-        "Sentiment140 Analysis description chinese simplified",
-        "Bacteriocin Sequence Prediction description chinese simplified",
-        "Quantum Phase Estimation description chinese simplified",
-        "KDE Implementation description chinese simplified",
-        "OS Scheduler description chinese simplified",
-        "Asynchronous Federated Learning description chinese simplified",
-        "React Portfolio description chinese simplified",
+
+     const descID: string[] = [
+        "dengue",
+        "nested",
+        "sentiment",
+        "bio",
+        "quantum",
+        "kde",
+        "os",
+        "django",
+        "portfolio",
     ]
 
-
+    const cardDesc = {
+        "en": {
+            "dengue": <p>I trained and assessed various machine learning models in Python 
+                and R for predicting dengue fever in patients based on various symptoms and factors. 
+                The models included logistic regression, decision trees, as well as basic deep learning 
+                models designed for tabular analysis. The project involved using Scikit-Learn, Rpart, 
+                Tensorflow, and Fastai. The data was made available to Professor Yen-Jen Oyang's lab at NTU 
+                from various hospitals in Taiwan, but otherwise remains confidential.</p>,
+            "nested": <p>This project was an implementation of a modified Lookahead Optimizer in Pytorch. 
+                This was done to assess whether multiple levels of Lookahead could improve convergence. 
+                Overall, I demonstrated that regular Lookahead can indeed improve convergence when combined 
+                optimizers such as Adam, but that multiple levels of Lookahead ("Nested Lookahead") does not 
+                lead to an increase in performance.</p>,
+            "sentiment": <p>The sentiment140 dataset contains 1.6 million tweets from Twitter, 
+                along with scores rating whether the posts were of positive or negative sentiment. 
+                This project was an example of training and performing sentiment analysis with Tensorflow and Fastai.</p>,
+            "bio": <div>
+                <p>
+                    This was my own implementation of the following research paper: 
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30418485/"> "Identifying antimicrobial peptides using word embedding with deep recurrent neural networks" </a> 
+                    by Hamid and Friedberg.
+                </p>
+                <p>
+                    This was part of a group project done in collaboration with Albert Li (李律), 
+                    a fellow classmate at NTU. Together, we trained a neural network with 5-fold cross validation 
+                    to classify whether or not amino acid sequences belonged to bacteriocins.
+                </p>
+                <p>
+                    We compiled our own datasets of amino acid sequences from Uniprot and BAGEL databases. 
+                    Amino acid sequences were split into trigrams, which then were used to train word embeddings using Gensim. 
+                    The weights were then reused in training a Tensorflow model, which we assessed with a ROC curve and various other statistical metrics. 
+                </p>
+            </div>,
+            "quantum": <div>
+                <p>
+                    This project implements a Quantum Phase Estimation circuit with an arbitrary number of qubits. 
+                    The output of a quantum computer was simulated using Python's Qiskit library. 
+                    Phase estimation allows for more advanced circuits and algorithms, such as 
+                    the HHL algorithm which could theoretically be used to solve linear systems Ax = b with a quantum computer.
+                </p>
+                <p>
+                    This was a project for a Quantum Algorithms course at NTU, offered by Professor Wen-Chin Chen (陳文進). 
+                    References for the project include notes by Professor Chen as well as the documentation at <a href="https://qiskit.org/">qiskit.org</a>. 
+                </p>
+            </div>,
+            "kde": <p>This was an implementation and comparison of various Kernel Density Estimation (KDE) methods, 
+                including Silverman's fixed bandwidth KDE, Abramson's variable bandwidth KDE, relaxed variable KDE, 
+                and elevated relaxed variable KDE. I initially implemented these methods using Cython for optimization, 
+                but then switched to Numba for easier debugging. I also implemented part of this in Julia, but ultimately 
+                finished with Python as I am more familiar with Python's ecosystem.</p>,
+            "os": <p>In this project, I built a program that creates, pauses, and resumes processes to mimic an operating system scheduler. 
+                The program works with policies such as FIFO (First In First Out), RR (Round Robin), SJF (Shortest Job First), and PSJF (Preemptive Shortest Job First). 
+                It was written in C and involved in the use of custom Linux syscalls. This project was done for an Operating Systems course at NTU.</p>,
+            "django": <p>The sample code linked below provides a general-purpose example of an e-commerce website 
+                that uses the django-paypal API to carry out transactions. This sample code is to be used primarily as a reference 
+                for implementing django-paypal IPN transactions with Django, as well as to demonstrate my ability to work with Django.</p>,
+            "portfolio": <p>This portfolio website was built using React, Express, Sass, and Typescript. 
+                State was managed with useContext and useState hooks, allowing for features such as changing 
+                the site language without reloading the page. Page transitions were done with Animate.css, 
+                framer-motion, and react-awesome-reveal.</p>,
+        },
+        "es": {
+            "dengue": <p>Dengue</p>,
+            "nested": <p>Nested</p>,
+            "sentiment": <p>sentiment</p>,
+            "bio": <p>bio</p>,
+            "quantum": <p>quantum</p>,
+            "kde": <p>KDE</p>,
+            "os": <p>OS</p>,
+            "django": <p>django</p>,
+            "portfolio": <p>portfolio</p>,
+        },
+        "cht": {
+            "dengue": <p>Dengue</p>,
+            "nested": <p>Nested</p>,
+            "sentiment": <p>sentiment</p>,
+            "bio": <p>bio</p>,
+            "quantum": <p>quantum</p>,
+            "kde": <p>KDE</p>,
+            "os": <p>OS</p>,
+            "django": <p>django</p>,
+            "portfolio": <p>portfolio</p>,
+        },
+        "chs": {
+            "dengue": <p>Dengue</p>,
+            "nested": <p>Nested</p>,
+            "sentiment": <p>sentiment</p>,
+            "bio": <p>bio</p>,
+            "quantum": <p>quantum</p>,
+            "kde": <p>KDE</p>,
+            "os": <p>OS</p>,
+            "django": <p>django</p>,
+            "portfolio": <p>portfolio</p>,
+        },
+    }
 
     const cardBackgrounds: string[] = [
         bg_dengue,
@@ -156,11 +213,11 @@ const Portfolio: React.FunctionComponent = () => {
             setTimeout(() => { card?.classList.toggle('card-zoomin') }, 200);
             // selectedID = idx;
             switch(lang) {
-                case "english": setCardValue(cardDescriptions[idx]); break;
-                case "spanish": setCardValue(cardDescriptions_spanish[idx]); break;
-                case "chinese_traditional": setCardValue(cardDescriptions_chinese_traditional[idx]); break;
-                case "chinese_simplified": setCardValue(cardDescriptions_chinese_simplified[idx]); break;
-                default: setCardValue(cardDescriptions[idx]);
+                case "english": setCardValue((cardDesc as any).en[descID[idx]]); break;
+                case "spanish": setCardValue((cardDesc as any).es[descID[idx]]); break;
+                case "chinese_traditional": setCardValue((cardDesc as any).cht[descID[idx]]); break;
+                case "chinese_simplified": setCardValue((cardDesc as any).chs[descID[idx]]); break;
+                default: setCardValue((cardDesc as any).en[descID[idx]]);
             }
             // setCardValue(cardNames[idx]);
         }
@@ -197,11 +254,7 @@ const Portfolio: React.FunctionComponent = () => {
     }
 // (event, info)=> {console.log(info.point.x, info.point.y, event);}
     return(
-        
-
         <div>
-
-
             <div className="portfolio">
                 <div className="Title">
                     {(lang==="english") && (
@@ -217,7 +270,6 @@ const Portfolio: React.FunctionComponent = () => {
                 <div className="content">
                     {cardNames.map((name, idx) => 
 
-                    
                         <motion.div id={`${idx}`} key={idx} className="card" 
                         style={{backgroundImage: `url(${cardBackgrounds[idx]})`}} 
                         initial={cardInit} animate={cardFinal} transition={{...trans, delay: 0.1*idx}}
@@ -248,13 +300,21 @@ const Portfolio: React.FunctionComponent = () => {
                     { fade && (
                         <motion.div className="scroll-this" initial={{opacity:0}} animate={{opacity: 1}}>
                             {(lang==="english") && (
-                                <p>{cardDescriptions[selectedID]}</p>
+                                <div>
+                                    {(cardDesc as any).en[descID[selectedID]]}
+                                </div>
                             ) || (lang==="spanish") && (
-                                <p>{cardDescriptions_spanish[selectedID]}</p>
+                                <div>
+                                    {(cardDesc as any).es[descID[selectedID]]}
+                                </div>
                             ) || (lang==="chinese_traditional") && (
-                                <p className="cn">{cardDescriptions_chinese_traditional[selectedID]}</p>
+                                <div className="cn">
+                                    {(cardDesc as any).cht[descID[selectedID]]}
+                                </div>
                             ) || (lang==="chinese_simplified") && (
-                                <p className="cn">{cardDescriptions_chinese_simplified[selectedID]}</p>
+                                <div className="cn">
+                                    {(cardDesc as any).chs[descID[selectedID]]}
+                                </div>
                             )}
                             <div className="btn-wrapper">
                                 <a href="https://github.com/johngilbert2000" target="_blank">
