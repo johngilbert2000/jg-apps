@@ -732,7 +732,7 @@ body, input[type="text"], input[type="email"], textarea {
 .banner {
   flex: 1 1 100%;
   background: $dark;
-  background-image: url('./images/main_bg2.png');
+  background-image: url('./images/main_bg2_low.jpg'); // main_bg2.png
   background-attachment: fixed;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1388,7 +1388,7 @@ body, input[type="text"], input[type="email"], textarea {
     // width: 400px;
     height: 100%;
     background: #eee;
-    background: url('./images/me_shadow.png');
+    background: url('./images/me_shadow_low.jpg'); // me_shadow.png
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
