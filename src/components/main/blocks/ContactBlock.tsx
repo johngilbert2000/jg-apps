@@ -23,7 +23,7 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-              <form action="POST" data-netlify="true">
+              <form method="POST" data-netlify="true" action="/contact" name="contact">
               <div className="card">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   Contact
