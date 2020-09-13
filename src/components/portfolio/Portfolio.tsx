@@ -149,7 +149,7 @@ const Portfolio: React.FunctionComponent = () => {
             "django": <p>The sample code linked below provides a general-purpose example of an e-commerce website 
                 that uses the django-paypal API to carry out transactions. This sample code is to be used primarily as a reference 
                 for implementing django-paypal IPN transactions with Django, as well as to demonstrate my ability to work with Django.</p>,
-            "portfolio": <p>This portfolio website was built using React, Express, Sass, and Typescript. 
+            "portfolio": <p>This portfolio website was built using React, Sass, and Typescript. 
                 State was managed with useContext and useState hooks, allowing for features such as changing 
                 the site language without reloading the page. Page transitions were done with Animate.css, 
                 framer-motion, and react-awesome-reveal.</p>,
