@@ -35,11 +35,11 @@ const CBlock: React.FunctionComponent = () => {
             <p>
               También he experimentado con una variedad de lenguajes como <span>Clojure</span>, 
               <span> Haskell</span>, <span>Julia</span>, y <span>Go</span>. 
-              Estoy dispuesto de aprender nueva tecnología 
+              Estoy dispuesto a aprender nueva tecnología 
               si es adecuado para el proyecto.
             </p>
             <p>
-              Vamos a trabajar juntos!
+              ¡Vamos a trabajar juntos!
             </p>
             </Fade>
           </div>

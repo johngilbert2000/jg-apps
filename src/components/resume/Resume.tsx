@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import {motion} from 'framer-motion';
 
 // import resume from '../../images/resume.png';
-import resume from '../../images/site_resume.png';
-import resume_es from '../../images/site_resume_es.png';
-import resume_cht from '../../images/site_resume_cht.png';
-import resume_chs from '../../images/site_resume_chs.png';
+import resume from '../../images/site_resume.jpg';
+import resume_es from '../../images/site_resume_es.jpg';
+import resume_cht from '../../images/site_resume_cht.jpg';
+import resume_chs from '../../images/site_resume_chs.jpg';
 // import resumePDF from '../../images/Resume.pdf';
 import { StoreContext } from '../storeContext';
 

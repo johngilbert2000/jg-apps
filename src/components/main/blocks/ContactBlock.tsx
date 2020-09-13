@@ -23,7 +23,7 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-              <form method="POST" data-netlify="true" action="/contact" name="contact">
+              <form method="POST" data-netlify="true" action="/" name="contact" onSubmit={submitHandler}>
               <div className="card">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   Contact
@@ -58,8 +58,7 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-
-              <form method="POST" data-netlify="true">
+              <form method="POST" data-netlify="true" action="/" name="contact" onSubmit={submitHandler}>
               <div className="card">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   Contácteme
@@ -94,8 +93,7 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-
-              <form action="POST" data-netlify="true">
+              <form method="POST" data-netlify="true" action="/" name="contact" onSubmit={submitHandler}>
               <div className="card cn">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   聯絡
@@ -109,7 +107,7 @@ const ContactBlock: React.FunctionComponent = () => {
                 <motion.textarea name="contact-message" id="contact-message" placeholder="訊息" initial={init} animate={final} transition={{...trans, delay: 0.9}} ></motion.textarea>
 
                 <motion.div data-netlify-recaptcha="true" initial={init} animate={final} transition={{...trans, delay:1}}></motion.div>
-                <motion.button className="btn draw-border" type="submit" onClick={submitHandler} initial={init} animate={final} transition={{...trans, delay: 1}}>發送</motion.button>
+                <motion.button className="btn draw-border" type="submit" initial={init} animate={final} transition={{...trans, delay: 1}}>發送</motion.button>
               </div>
               </form>
               )
@@ -130,7 +128,7 @@ const ContactBlock: React.FunctionComponent = () => {
             {
               !msgSent && (
 
-              <form action="POST" data-netlify="true">
+              <form method="POST" data-netlify="true" action="/" name="contact" onSubmit={submitHandler}>
               <div className="card">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   联络
@@ -144,7 +142,7 @@ const ContactBlock: React.FunctionComponent = () => {
                 <motion.textarea name="contact-message" id="contact-message" placeholder="讯息" initial={init} animate={final} transition={{...trans, delay: 0.9}} ></motion.textarea>
 
                 <motion.div data-netlify-recaptcha="true" initial={init} animate={final} transition={{...trans, delay:1}}></motion.div>
-                <motion.button className="btn draw-border" type="submit" onClick={submitHandler} initial={init} animate={final} transition={{...trans, delay: 1}}>发送</motion.button>
+                <motion.button className="btn draw-border" type="submit" initial={init} animate={final} transition={{...trans, delay: 1}}>发送</motion.button>
               </div>
               </form>
               )
