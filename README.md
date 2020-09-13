@@ -1,6 +1,6 @@
 # A website
 
-A website in progress
+A portfolio website
 
 
 <hr>

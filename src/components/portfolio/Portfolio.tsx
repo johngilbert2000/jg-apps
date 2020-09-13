@@ -101,7 +101,7 @@ const Portfolio: React.FunctionComponent = () => {
                 models designed for tabular analysis. The project involved using Scikit-Learn, Rpart, 
                 Tensorflow, and Fastai. The data was made available to Professor Yen-Jen Oyang's lab at NTU 
                 from various hospitals in Taiwan, but otherwise remains confidential.</p>,
-            "nested": <p>This project was an implementation of a modified Lookahead Optimizer in Pytorch. 
+            "nested": <p>This project was an implementation of a modified <a href="https://arxiv.org/abs/1907.08610" target="_blank">Lookahead Optimizer</a> in Pytorch. 
                 This was done to assess whether multiple levels of Lookahead could improve convergence. 
                 Overall, I demonstrated that regular Lookahead can indeed improve convergence when combined 
                 optimizers such as Adam, but that multiple levels of Lookahead ("Nested Lookahead") does not 
@@ -141,7 +141,7 @@ const Portfolio: React.FunctionComponent = () => {
             "kde": <p>This was an implementation and comparison of various Kernel Density Estimation (KDE) methods, 
                 including Silverman's fixed bandwidth KDE, Abramson's variable bandwidth KDE, relaxed variable KDE, 
                 and elevated relaxed variable KDE. I initially implemented these methods using Cython for optimization, 
-                but then switched to Numba for easier debugging. I also implemented part of this in Julia, but ultimately 
+                but then switched to Numba for an easier debugging experience. I also implemented part of this in Julia, but ultimately 
                 finished with Python as I am more familiar with Python's ecosystem.</p>,
             "os": <p>In this project, I built a program that creates, pauses, and resumes processes to mimic an operating system scheduler. 
                 The program works with policies such as FIFO (First In First Out), RR (Round Robin), SJF (Shortest Job First), and PSJF (Preemptive Shortest Job First). 
