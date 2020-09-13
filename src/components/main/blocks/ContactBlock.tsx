@@ -32,10 +32,11 @@ const ContactBlock: React.FunctionComponent = () => {
                   <i className="far fa-envelope"></i>
                 </motion.p>
 
-                <motion.input type="text" name="name" id="contact-name" placeholder="Your Name" initial={init} animate={final} transition={{...trans, delay: 0.7}} />
-                <motion.input type="email" name="email" id="contact-email" placeholder="Your Email" initial={init} animate={final} transition={{...trans, delay: 0.8}} />
-                <motion.textarea name="contact-message" id="contact-message" placeholder="Message" initial={init} animate={final} transition={{...trans, delay: 0.9}} ></motion.textarea>
-                <motion.div data-netlify-recaptcha="true" initial={init} animate={final} transition={{...trans, delay:1}}></motion.div>
+                <input type="hidden" name="form-name" value="contact-form" />
+                <motion.input required type="text" name="name" id="contact-name" placeholder="Your Name" initial={init} animate={final} transition={{...trans, delay: 0.7}} />
+                <motion.input required type="email" name="email" id="contact-email" placeholder="Your Email" initial={init} animate={final} transition={{...trans, delay: 0.8}} />
+                <motion.textarea required name="contact-message" id="contact-message" placeholder="Message" initial={init} animate={final} transition={{...trans, delay: 0.9}} ></motion.textarea>
+                {/* <motion.div data-netlify-recaptcha="true" initial={init} animate={final} transition={{...trans, delay:1}}></motion.div> */}
                 <motion.button className="btn draw-border" type="submit" initial={init} animate={final} transition={{...trans, delay: 1}}>Submit</motion.button>
                 {/* onClick={submitHandler} */}
               </div>
