@@ -9,7 +9,7 @@ const ContactBlock: React.FunctionComponent = () => {
 
   const [msgSent, setMsgSent] = useState(false);
   const submitHandler = (e: any) => {
-    e.preventDefault();
+    // e.preventDefault();
     setMsgSent(!msgSent);
   };
 
@@ -23,7 +23,8 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-              <form method="POST" data-netlify="true" action="/" name="contact">
+              <form method="POST" data-netlify="true" action="/msgsent" name="contact" >
+              {/* onSubmit={submitHandler} */}
               <div className="card">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   Contact
@@ -58,7 +59,8 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-              <form method="POST" data-netlify="true" action="/contact" name="contact" onSubmit={submitHandler}>
+              <form method="POST" data-netlify="true" action="/msgsent" name="contact" > 
+              {/* onSubmit={submitHandler} */}
               <div className="card">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   Contácteme
@@ -93,7 +95,8 @@ const ContactBlock: React.FunctionComponent = () => {
         <div className="contact-bloc">
             {
               !msgSent && (
-              <form method="POST" data-netlify="true" action="/contact" name="contact">
+              <form method="POST" data-netlify="true" action="/msgsent" name="contact">  
+              {/* onSubmit={submitHandler} */}
               <div className="card cn">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   聯絡
@@ -128,7 +131,8 @@ const ContactBlock: React.FunctionComponent = () => {
             {
               !msgSent && (
 
-              <form method="POST" data-netlify="true" action="/" name="contact" onSubmit={submitHandler}>
+              <form method="POST" data-netlify="true" action="/msgsent" name="contact">  
+              {/* onSubmit={submitHandler} */}
               <div className="card">
                 <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
                   联络
