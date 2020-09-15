@@ -2,10 +2,10 @@ import React, { useContext } from 'react';
 import {motion} from 'framer-motion';
 
 // import resume from '../../images/resume.png';
-import resume from '../../images/site_resume.jpg';
-import resume_es from '../../images/site_resume_es.jpg';
-import resume_cht from '../../images/site_resume_cht.jpg';
-import resume_chs from '../../images/site_resume_chs.jpg';
+import resume from '../../images/johngilbert_resume.jpg';
+import resume_es from '../../images/johngilbert_resume_es.jpg';
+import resume_cht from '../../images/johngilbert_resume_cht.jpg';
+import resume_chs from '../../images/johngilbert_resume_chs.jpg';
 // import resumePDF from '../../images/Resume.pdf';
 import { StoreContext } from '../storeContext';
 
@@ -24,8 +24,8 @@ const Resume: React.FunctionComponent = () => {
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
 
-                <a href="./site_resume.pdf" download>
-                    <div className="btn-container" onClick={ () => window.open(require('../../images/site_resume.pdf'), '_none')}>
+                <a href="./johngilbert_resume.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/johngilbert_resume.pdf'), '_none')}>
                         <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> Download</button>
                     </div>
                 </a>
@@ -42,8 +42,8 @@ const Resume: React.FunctionComponent = () => {
                     <img src={resume_es} alt="resume-image"/>
                 </motion.div>
 
-                <a href="./site_resume_es.pdf" download>
-                    <div className="btn-container" onClick={ () => window.open(require('../../images/site_resume_es.pdf'), '_none')}>
+                <a href="./johngilbert_resume_es.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/johngilbert_resume_es.pdf'), '_none')}>
                         <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> Descargar</button>
                     </div>
                 </a>
@@ -60,8 +60,8 @@ const Resume: React.FunctionComponent = () => {
                     <img src={resume_cht} alt="resume-image"/>
                 </motion.div>
 
-                <a href="./site_resume_cht.pdf" download>
-                    <div className="btn-container" onClick={ () => window.open(require('../../images/site_resume_cht.pdf'), '_none')}>
+                <a href="./johngilbert_resume_cht.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/johngilbert_resume_cht.pdf'), '_none')}>
                         <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> 下載</button>
                     </div>
                 </a>
@@ -79,8 +79,8 @@ const Resume: React.FunctionComponent = () => {
                     <img src={resume_chs} alt="resume-image"/>
                 </motion.div>
 
-                <a href="./site_resume_chs.pdf" download>
-                    <div className="btn-container" onClick={ () => window.open(require('../../images/site_resume_chs.pdf'), '_none')}>
+                <a href="./johngilbert_resume_chs.pdf" download>
+                    <div className="btn-container" onClick={ () => window.open(require('../../images/johngilbert_resume_chs.pdf'), '_none')}>
                         <button className="btn draw-border"><i className="far fa-arrow-alt-circle-down"></i> 下载</button>
                     </div>
                 </a>

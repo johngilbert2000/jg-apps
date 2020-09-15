@@ -37,7 +37,7 @@ const JSBlock: React.FunctionComponent = () => {
               {/* <span className="lighter"> <i className="fab fa-node-js fa-2x"></i></span> */}
               <p>
                 I have done projects in the frontend with <span>React</span>, 
-                and in the backend with <span>Express</span> and <span>Django</span>.
+                and in the backend with <span>Django</span>.
               </p>
             </Fade>
             </div>
@@ -55,7 +55,7 @@ const JSBlock: React.FunctionComponent = () => {
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
               <p>
-                He hecho proyectos utilizando <span>React</span>, <span>Express</span>, y <span>Django</span>. 
+                He hecho proyectos utilizando <span>React</span> y <span>Django</span>. 
                 Puedo ser un desarrollador de frontend o de backend para su empresa.
               </p>
             </Fade>
@@ -73,7 +73,7 @@ const JSBlock: React.FunctionComponent = () => {
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
               <p>
-                我用過 <span>React</span>、 <span>Express</span>、和 <span>Django</span>。<br />
+                我用過 <span>React</span> 和 <span>Django</span>。<br />
                 我對前端和後端都有能力。
               </p>
             </Fade>
@@ -91,7 +91,7 @@ const JSBlock: React.FunctionComponent = () => {
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
               <p>
-                我用过 <span>React</span>、<span>Express</span>、和 <span>Django</span>。<br />
+                我用过 <span>React</span> 和 <span>Django</span>。<br />
                 我对前端和后端都有能力。
               </p>
             </Fade>

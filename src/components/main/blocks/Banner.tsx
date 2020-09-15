@@ -56,7 +56,7 @@ const Banner: React.FunctionComponent = () => {
         <div className="cover" >
           <Fade duration={1500}>
           <motion.h1 className="Title-cn" initial={coverInit} animate={coverFinal} transition={trans} >
-            探索 <br />成就 <br />超越
+            <span className="break glow">探索</span> <span className="break glow">成就</span> <span className="break glow">超越</span>
           </motion.h1>
           <motion.h2 className="Title2 cn" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
             聘用對<span>人工智慧</span>、<span>網站編程</span>、以及<span>科學研究</span>有能力的編程者吧
@@ -68,7 +68,7 @@ const Banner: React.FunctionComponent = () => {
         <div className="cover" >
           <Fade duration={1500}>
           <motion.h1 className="Title-cn" initial={coverInit} animate={coverFinal} transition={trans} >
-            探索 <br /> 成就 <br /> 超越
+            <span className="break glow">探索</span> <span className="break glow">成就</span> <span className="break glow">超越</span>
           </motion.h1>
           <motion.h2 className="Title2 cn" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
             应聘对<span>人工智慧、网站编程</span>、以及<span>科学研究</span>有能力的编程者吧

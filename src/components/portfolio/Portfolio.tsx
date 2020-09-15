@@ -101,7 +101,7 @@ const Portfolio: React.FunctionComponent = () => {
                 models designed for tabular analysis. The project involved using Scikit-Learn, Rpart, 
                 Tensorflow, and Fastai. The data was made available to Professor Yen-Jen Oyang's lab at NTU 
                 from various hospitals in Taiwan, but otherwise remains confidential.</p>,
-            "nested": <p>This project was an implementation of a modified <a href="https://arxiv.org/abs/1907.08610" target="_blank">Lookahead Optimizer</a> in Pytorch. 
+            "nested": <p>This project was an implementation of a modified <a href="https://arxiv.org/abs/1907.08610" target="_blank" rel="noopener noreferrer">Lookahead Optimizer</a> in Pytorch. 
                 This was done to assess whether multiple levels of Lookahead could improve convergence. 
                 Overall, I demonstrated that regular Lookahead can indeed improve convergence when combined 
                 optimizers such as Adam, but that multiple levels of Lookahead ("Nested Lookahead") does not 
@@ -112,7 +112,7 @@ const Portfolio: React.FunctionComponent = () => {
             "bio": <div>
                 <p>
                     This was my own implementation of the following research paper: 
-                    <a href="https://pubmed.ncbi.nlm.nih.gov/30418485/"> "Identifying antimicrobial peptides using word embedding with deep recurrent neural networks" </a> 
+                    <a href="https://pubmed.ncbi.nlm.nih.gov/30418485/" target="_blank" rel="noopener noreferrer"> "Identifying antimicrobial peptides using word embedding with deep recurrent neural networks" </a> 
                     by Hamid and Friedberg.
                 </p>
                 <p>
@@ -135,7 +135,7 @@ const Portfolio: React.FunctionComponent = () => {
                 </p>
                 <p>
                     This was a project for a Quantum Algorithms course at NTU, offered by Professor Wen-Chin Chen (陳文進). 
-                    References for the project include notes by Professor Chen as well as the documentation at <a href="https://qiskit.org/">qiskit.org</a>. 
+                    References for the project include notes by Professor Chen as well as the documentation at <a href="https://qiskit.org/" target="_blank" rel="noopener noreferrer">qiskit.org</a>. 
                 </p>
             </div>,
             "kde": <p>This was an implementation and comparison of various Kernel Density Estimation (KDE) methods, 
@@ -155,38 +155,77 @@ const Portfolio: React.FunctionComponent = () => {
                 framer-motion, and react-awesome-reveal.</p>,
         },
         "es": {
-            "dengue": <p>Dengue</p>,
-            "nested": <p>Nested</p>,
-            "sentiment": <p>sentiment</p>,
-            "bio": <p>bio</p>,
-            "quantum": <p>quantum</p>,
-            "kde": <p>KDE</p>,
-            "os": <p>OS</p>,
-            "django": <p>django</p>,
-            "portfolio": <p>portfolio</p>,
+            "dengue": <p>[ Translation in progress ]</p>,
+            "nested": <p>[ Translation in progress ]</p>,
+            "sentiment": <p>[ Translation in progress ]</p>,
+            "bio": <p>[ Translation in progress ]</p>,
+            "quantum": <p>[ Translation in progress ]</p>,
+            "kde": <p>[ Translation in progress ]</p>,
+            "os": <p>[ Translation in progress ]</p>,
+            "django": <p>[ Translation in progress ]</p>,
+            "portfolio": <p>[ Translation in progress ]</p>,
         },
         "cht": {
-            "dengue": <p>Dengue</p>,
-            "nested": <p>Nested</p>,
-            "sentiment": <p>sentiment</p>,
-            "bio": <p>bio</p>,
-            "quantum": <p>quantum</p>,
-            "kde": <p>KDE</p>,
-            "os": <p>OS</p>,
-            "django": <p>django</p>,
-            "portfolio": <p>portfolio</p>,
+            "dengue": <p>[ Translation in progress ]</p>,
+            "nested": <p>[ Translation in progress ]</p>,
+            "sentiment": <p>[ Translation in progress ]</p>,
+            "bio": <p>[ Translation in progress ]</p>,
+            "quantum": <p>[ Translation in progress ]</p>,
+            "kde": <p>[ Translation in progress ]</p>,
+            "os": <p>[ Translation in progress ]</p>,
+            "django": <p>[ Translation in progress ]</p>,
+            "portfolio": <p>[ Translation in progress ]</p>,
         },
         "chs": {
-            "dengue": <p>Dengue</p>,
-            "nested": <p>Nested</p>,
-            "sentiment": <p>sentiment</p>,
-            "bio": <p>bio</p>,
-            "quantum": <p>quantum</p>,
-            "kde": <p>KDE</p>,
-            "os": <p>OS</p>,
-            "django": <p>django</p>,
-            "portfolio": <p>portfolio</p>,
+            "dengue": <p>[ Translation in progress ]</p>,
+            "nested": <p>[ Translation in progress ]</p>,
+            "sentiment": <p>[ Translation in progress ]</p>,
+            "bio": <p>[ Translation in progress ]</p>,
+            "quantum": <p>[ Translation in progress ]</p>,
+            "kde": <p>[ Translation in progress ]</p>,
+            "os": <p>[ Translation in progress ]</p>,
+            "django": <p>[ Translation in progress ]</p>,
+            "portfolio": <p>[ Translation in progress ]</p>,
         },
+    }
+
+    const cardLinks = {
+        "dengue": "https://github.com/johngilbert2000",
+        "nested": "https://github.com/johngilbert2000/nested_lookahead",
+        "sentiment": "https://github.com/johngilbert2000/sentiment140_with_fastai",
+        "bio": "https://github.com/johngilbert2000/bioinformatics_project",
+        "quantum": "https://github.com/johngilbert2000/quantum_phase_estimation",
+        "kde": "https://github.com/johngilbert2000/KDE_project",
+        "os": "https://github.com/johngilbert2000/os_sched2",
+        "django": "https://github.com/johngilbert2000/django-paypal-demonstration",
+        "portfolio": "https://github.com/johngilbert2000/jg-apps",
+    }
+
+    const gitButt = {
+       "button" :  
+            <div className="btn-wrapper">
+                <a href={(cardLinks as any)[descID[selectedID]]} target="_blank" rel="noopener noreferrer">
+                    {(lang==="english") && (
+                        <div>
+                            <button className="btn">View on Github</button>
+                        </div>
+                    ) || (lang==="spanish") && (
+                        <div>
+                            <button className="btn">Ver en Github</button>
+                            {/* <i className="fas fa-code-branch"></i> */}
+                        </div>
+                    ) || (lang==="chinese_traditional") && (
+                        <div>
+                            <button className="btn">在 Github 看</button>
+                        </div>
+                    ) || (lang==="chinese_simplified") && (
+                        <div>
+                            <button className="btn">在 Github 看</button>
+                        </div>
+                    )} 
+                </a>
+            </div>,
+        "noButton" : <div></div>,
     }
 
     const cardBackgrounds: string[] = [
@@ -316,7 +355,9 @@ const Portfolio: React.FunctionComponent = () => {
                                     {(cardDesc as any).chs[descID[selectedID]]}
                                 </div>
                             )}
-                            <div className="btn-wrapper">
+                            {(selectedID === 0) ? gitButt.noButton : gitButt.button}
+
+                            {/* <div className="btn-wrapper">
                                 <a href="https://github.com/johngilbert2000" target="_blank">
                                     {(lang==="english") && (
                                        <div>
@@ -325,7 +366,6 @@ const Portfolio: React.FunctionComponent = () => {
                                     ) || (lang==="spanish") && (
                                        <div>
                                             <button className="btn">Ver en Github</button>
-                                            {/* <i className="fas fa-code-branch"></i> */}
                                         </div>
                                     ) || (lang==="chinese_traditional") && (
                                        <div>
@@ -335,10 +375,10 @@ const Portfolio: React.FunctionComponent = () => {
                                        <div>
                                             <button className="btn">在 Github 看</button>
                                         </div>
-                                    )}
- 
+                                    )} 
                                 </a>
-                            </div>
+                            </div> */}
+                            {/* <i className="fas fa-code-branch"></i> */}
                         </motion.div>
                     )}
                     { fade && (
