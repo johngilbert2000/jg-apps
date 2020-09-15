@@ -42,6 +42,7 @@ const ContactBlock: React.FunctionComponent = () => {
           <i className="far fa-envelope"></i>
         </motion.p>
 
+        <input type="hidden" name="form-name" value="contact-form" />
         <motion.input required type="text" name="name" id="contact-name" placeholder="Su Nombre" initial={init} animate={final} transition={{...trans, delay: 0.7}} />
         <motion.input required type="email" name="email" id="contact-email" placeholder="Su Correo Electronico" initial={init} animate={final} transition={{...trans, delay: 0.8}} />
         <motion.textarea required name="contact-message" id="contact-message" placeholder="Mensaje" initial={init} animate={final} transition={{...trans, delay: 0.9}} ></motion.textarea>
@@ -56,6 +57,7 @@ const ContactBlock: React.FunctionComponent = () => {
           <i className="far fa-envelope"></i>
         </motion.p>
 
+        <input type="hidden" name="form-name" value="contact-form" />
         <motion.input required type="text" name="name" id="contact-name" placeholder="您的姓名" initial={init} animate={final} transition={{...trans, delay: 0.7}} />
         <motion.input required type="email" name="email" id="contact-email" placeholder="您的電子郵件" initial={init} animate={final} transition={{...trans, delay: 0.8}} />
         <motion.textarea required name="contact-message" id="contact-message" placeholder="訊息" initial={init} animate={final} transition={{...trans, delay: 0.9}} ></motion.textarea>
@@ -70,6 +72,7 @@ const ContactBlock: React.FunctionComponent = () => {
           <i className="far fa-envelope"></i>
         </motion.p>
 
+        <input type="hidden" name="form-name" value="contact-form" />
         <motion.input required type="text" name="name" id="contact-name" placeholder="您的姓名" initial={init} animate={final} transition={{...trans, delay: 0.7}} />
         <motion.input required type="email" name="email" id="contact-email" placeholder="您的电子邮件" initial={init} animate={final} transition={{...trans, delay: 0.8}} />
         <motion.textarea required name="contact-message" id="contact-message" placeholder="讯息" initial={init} animate={final} transition={{...trans, delay: 0.9}} ></motion.textarea>
