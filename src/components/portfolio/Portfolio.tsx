@@ -160,7 +160,7 @@ const Portfolio: React.FunctionComponent = () => {
                 así como modelos básicos diseñados para analizar datos tabulares. Usé Scikit-Learn, Rpart, Tensorflow, y Fastai. 
                 Los datos fueron facilitados del laboratorio de Profesor Yen-Jen Oyang en NTU por varios hospitales en Taiwán, 
                 pero por lo demás siguen siendo confidenciales.</p>,
-            "nested": <p>Este proyecto fue una implementación de un optimizador de Lookahead modificado. 
+            "nested": <p>Este proyecto fue una implementación de un optimizador de <a href="https://arxiv.org/abs/1907.08610" target="_blank" rel="noopener noreferrer">Lookahead</a> modificado. 
                 El propósito era evaluar si usando múltiples niveles de Lookahead podrían mejorar la convergencia. 
                 En general, demostré que Lookahead regular puede mejorar la convergencia cuando se combina con optimizadores como Adam, 
                 pero múltiples niveles de Lookahead ("Nested Lookahead") no mejora la convergencia.</p>,
