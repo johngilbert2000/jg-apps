@@ -123,7 +123,7 @@ const NavMenu: React.FunctionComponent = () => {
                     <Link to="/about"><li>Acerca de Mí</li></Link>
                     <Link to="/portfolio"><li>Portafolio</li></Link>
                     <Link to="/resume"><li>Currículum</li></Link>
-                    <Link to="/contact"><li>Contacteme</li></Link>
+                    <Link to="/contact"><li>Contactar</li></Link>
                   </ul>
                 ) || (lang==="chinese_traditional") && (
                   <ul>
@@ -210,7 +210,7 @@ const NavMenu: React.FunctionComponent = () => {
                 <li><Link to="/about" onClick={clickBox}>Acerca de Mí</Link></li>
                 <li><Link to="/portfolio" onClick={clickBox}>Portafolio</Link></li>
                 <li><Link to="/resume" onClick={clickBox}>Currículum</Link></li>
-                <li><Link to="/contact" onClick={clickBox}>Contacteme</Link></li>
+                <li><Link to="/contact" onClick={clickBox}>Contactar</Link></li>
                 </Slide>
                 </Fade>
               </ul>
