@@ -39,7 +39,7 @@ const CBlock: React.FunctionComponent = () => {
               si es adecuado para el proyecto.
             </p>
             <p>
-              ¡Vamos a trabajar juntos!
+              Estoy disponible para asistirle.
             </p>
             </Fade>
           </div>

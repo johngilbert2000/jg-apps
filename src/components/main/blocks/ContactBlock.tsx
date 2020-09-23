@@ -36,7 +36,7 @@ const ContactBlock: React.FunctionComponent = () => {
     "spanish":
       <div className="card">
         <motion.h1 initial={{opacity: 0, x: -300}} animate={{opacity: 1, x: 0}} transition={{type: "spring", duration: 0.2, stiffness: 70}}>
-          Contácteme
+          Contactar
         </motion.h1>
         <motion.p initial={{...init, scale: 0.2}} animate={final} transition={{...trans, delay: 0.4, stiffnes: 120}}>
           <i className="far fa-envelope"></i>

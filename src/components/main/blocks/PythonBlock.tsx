@@ -46,8 +46,8 @@ const PythonBlock: React.FunctionComponent = () => {
         <motion.div className="content Title" initial={coverInit} animate={coverFinal} transition={trans}>
           <Fade damping={1.5} delay={300} fraction={0.4} duration={1500}>
           <motion.p initial={coverInit} animate={coverFinal} transition={{...trans, delay: 1}}>
-            Con experiencia en el <span>Procesamiento Natural del Lenguaje</span>, <span>Clasificación de Imágenes</span>, 
-            y <span>Analisis de Datos Tabulares</span>, he desarrollado modeles de deep learning (aprendizaje profundo) 
+            Tengo experiencia en el <span>Procesamiento Natural del Lenguaje</span>, <span>Clasificación de Imágenes</span>, 
+            y <span>Analisis de Datos Tabulares</span>. He desarrollado modelos de deep learning (aprendizaje profundo) 
             y optimizadores en <span>Pytorch</span> y <span>Tensorflow</span>.
           </motion.p>
           <p>
