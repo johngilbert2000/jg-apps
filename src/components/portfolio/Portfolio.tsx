@@ -206,7 +206,7 @@ const Portfolio: React.FunctionComponent = () => {
                 RR (Round Robin), SJF (Shortest Job First), y PSJF (Preemptive Shortest Job First). Fue escrito en C y se utilizó 
                 syscalls personalizadas de Linux.</p>,
             "django": <p>Este código es un ejemplo general de como utilizar django-paypal 
-                para hacer transacciones en un sitio web de comercio, y también es un ejemplo de mi abilidad de usar django.</p>,
+                para hacer transacciones en un sitio web de comercio, y también es un ejemplo de mi habilidad de usar django.</p>,
             "portfolio": <p>Este sitio web del portafolio fue construido utilizando React, Sass, y Typescript. 
                 El estado fue manejado con los hooks de useContext y useState, permitiendo características como 
                 el cambio del idioma sin recargar la página. Las transiciones del sitio se hicieron con Animate.css, framer-motion, y react-awesome-reveal.</p>,
