@@ -49,8 +49,8 @@ const JSBlock: React.FunctionComponent = () => {
             <div className="">
               <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
               <p>
-                Estoy familiarizado con <span> Object-Oriented Programming</span> (Programación Orientada a Objectos) 
-                y <span>Programación Funcional</span>, y puedo adaptar mi estilo de programación para satisfacer 
+                Estoy familiarizado con <span> Object-Oriented Programming</span> (Programación Orientada a Objetos) 
+                y <span>Programación Funcional</span>, y puedo adaptar mi estilo de programación para cumplir con 
                 las necesidades de su empresa.
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
@@ -68,7 +68,7 @@ const JSBlock: React.FunctionComponent = () => {
             <div className="">
               <Fade damping={1.3} duration={1500} triggerOnce={false} delay={500}>
               <p>
-              我對 <span>Object Oriented Programming</span> (物件導向程式設計）
+              我對 <span>Object-Oriented Programming</span> (物件導向程式設計）
               和 <span>Functional Programming</span> (函式編程）都很熟悉，所以我可以為公司改變我寫程式的方法。
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>

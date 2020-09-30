@@ -44,7 +44,7 @@ const Portfolio: React.FunctionComponent = () => {
     ]
 
     const cardNames_spanish: string[] = [
-        "Dengue Predicción",
+        "Predicción sobre el Dengue",
         "Nested Lookahead",
         "Análisis de Sentiment140",
         "Predicción de las Secuencias de Bacteriocinas",
@@ -146,7 +146,7 @@ const Portfolio: React.FunctionComponent = () => {
             "os": <p>In this project, I built a program that creates, pauses, and resumes processes to mimic an operating system scheduler. 
                 The program works with policies such as FIFO (First In First Out), RR (Round Robin), SJF (Shortest Job First), and PSJF (Preemptive Shortest Job First). 
                 It was written in C and involved in the use of custom Linux syscalls. This project was done for an Operating Systems course at NTU.</p>,
-            "django": <p>The sample code linked below provides a general-purpose example of an e-commerce website 
+            "django": <p>The sample code linked below provides a general-purpose example of part of an e-commerce website 
                 that uses the django-paypal API to carry out transactions. This sample code is to be used primarily as a reference 
                 for implementing django-paypal IPN transactions with Django, as well as to demonstrate my ability to work with Django.</p>,
             "portfolio": <p>This portfolio website was built using React, Sass, and Typescript. 
@@ -156,25 +156,25 @@ const Portfolio: React.FunctionComponent = () => {
         },
         "es": {
             "dengue": <p>Entrené y evalué varios modelos de aprendizaje automatico con Python y R para predicir dengue 
-                a partir de varios síntomas y factores. Los modelos incluyeron regresión logistica, arboles de decision, 
-                así como modelos básicos diseñados para analizar datos tabulares. Usé Scikit-Learn, Rpart, Tensorflow, y Fastai. 
+                a partir de varios síntomas y factores. Los modelos incluyeron regresión logística, árboles de decisión, 
+                así como modelos básicos de aprendizaje profundo diseñados para analizar datos tabulares. Usé Scikit-Learn, Rpart, Tensorflow, y Fastai. 
                 Los datos fueron facilitados del laboratorio de Profesor Yen-Jen Oyang en NTU por varios hospitales en Taiwán, 
-                pero por lo demás siguen siendo confidenciales.</p>,
-            "nested": <p>Este proyecto fue una implementación de un optimizador de <a href="https://arxiv.org/abs/1907.08610" target="_blank" rel="noopener noreferrer">Lookahead</a> modificado. 
+                pero para los demás siguen siendo confidenciales.</p>,
+            "nested": <p>Este proyecto fue una implementación de un optimizador modificado de <a href="https://arxiv.org/abs/1907.08610" target="_blank" rel="noopener noreferrer">Lookahead</a>. 
                 El propósito era evaluar si usando múltiples niveles de Lookahead podrían mejorar la convergencia. 
-                En general, demostré que Lookahead regular puede mejorar la convergencia cuando se combina con optimizadores como Adam, 
-                pero múltiples niveles de Lookahead ("Nested Lookahead") no mejora la convergencia.</p>,
+                En general, demostré que el Lookahead regular puede mejorar la convergencia cuando se combina con optimizadores como Adam, 
+                pero que múltiples niveles de Lookahead ("Nested Lookahead") no mejora la convergencia.</p>,
             "sentiment": <p>El conjunto de datos de Sentiment140 contiene 1.6 millones de tweets de Twitter, 
                 junto con puntaciones que califican si fueron de sentimiento positivo o negativo. 
-                Este proyecto fue un ejemplo de entrenamiento y realización de análisis de sentimientos con Tensorflow y Fastai.</p>,
+                Este proyecto fue un ejemplo de entrenamiento y de la realización de análisis de sentimientos con Tensorflow y Fastai.</p>,
             "bio": <div>
                 <p>
-                    Esta fue mi propria implementación del siguiente articulo de investigación:
+                    Esta fue mi propria implementación del siguiente artículo de investigación:
                     <a href="https://pubmed.ncbi.nlm.nih.gov/30418485/" target="_blank" rel="noopener noreferrer"> "Identifying antimicrobial peptides using word embedding with deep recurrent neural networks" </a> 
                     de Hamid y Friedberg.
                 </p>
                 <p>
-                    Esto fue un parte de un proyecto de grupo hecho en collaboración Albert Li (李律), 
+                    Esto fue parte de un proyecto de grupo hecho en colaboración con Albert Li (李律), 
                     un compañero de clase de NTU. Juntos, entrenamos una red neuronal con validación cruzada 
                     de 5 iteraciones para clasificar si las secuencias de los aminoácidos pertenecían a bacteriocinas.
                 </p>
@@ -186,30 +186,31 @@ const Portfolio: React.FunctionComponent = () => {
             </div>,
             "quantum": <div>
                 <p>
-                    Implementé un circuito de Estimación de Fase Cuántica con un numero arbitrario de qubits. 
+                    Implementé un circuito de Estimación de Fase Cuántica con un número arbitrario de qubits. 
                     La salida de una computadora cuántica se simuló utilizando Qiskit. La estimación de fase hace posibile circuitos 
-                    y algoritmos más avanzadaos, como el algoritmo HHL que teóreticamente podría utilizarse para resolver sistemas lineales 
+                    y algoritmos más avanzados, como el algoritmo HHL que teóricamente se podría utilizar para resolver sistemas lineales 
                     Ax = b con una computadora cuántica.
                 </p>
                 <p>
-                    Este fue un proyecto para un curso de Algoritmos Cuánticos en NTU, ofrecido por Profesor Wen-Chin Chen (陳文進). 
-                    Referencias para el proyecto incluyen notas de Profesor Chen y la documentación en <a href="https://qiskit.org/" target="_blank" rel="noopener noreferrer">qiskit.org</a>. 
+                    Este fue un proyecto para un curso de Algoritmos Cuánticos en NTU del Profesor Wen-Chin Chen (陳文進). 
+                    Referencias para el proyecto incluyen apuntes por el Profesor Chen y la documentación en <a href="https://qiskit.org/" target="_blank" rel="noopener noreferrer">qiskit.org</a>. 
                 </p>
             </div>,
-            "kde": <p>Esta fue una implementación y comparación de varios metodos de estimación de densidad de kernel (KDE), 
+            "kde": <p>Esta fue una implementación y comparación de varios métodos de estimación de densidad de kernel (KDE), 
                 incluyendo la KDE de ancho de banda fijo de Silverman, la KDE de ancho de banda variable de Abramson, 
                 y la KDE de variable relajada, y la KDE de variable relajada elevada. Inicialmente implementé estos metodos 
                 utilizando Cython para optimización, pero luego cambié a utilizar Numba para una experiencia de depuración más fácil. 
-                También implementé parte de esto en Julia, pero finalmente terminé con Python porque estoy más familiarizado con el ecosistema de Python.</p>,
+                También implementé parte de esto en Julia, pero finalmente terminé con Python porque conozco más sobre el ecosistema de Python.</p>,
             "os": <p>En este proyecto, construí una programa que crea, pausa, y reanuda procesos para imitar un planificador 
                 de sistema operativo. Esta programa funciona con policias como PEPS (primero en entrar, primero en salir), 
-                RR (Round Robin), SJF (Shortest Job First), y PSJF (Preemptive Shortest Job First). Fue escrito en C y se utilizó 
+                RR (Round Robin), SJF (Shortest Job First), y PSJF (Preemptive Shortest Job First). Se escribió en C y se utilizó 
                 syscalls personalizadas de Linux.</p>,
-            "django": <p>Este código es un ejemplo general de como utilizar la API de Django-Paypal 
-                para hacer transacciones en un sitio web de comercio, y también es un ejemplo de mi habilidad de usar Django.</p>,
+            "django": <p>El código ejemplar, con su vínculo abajo-escrito, es un ejemplo general de parte de un sitio web de comercio que utiliza Django-Paypal
+                para hacer transacciones. Se puede utilizar este código como un ejemplo para implementar las transacciones IPN con Django-Paypal,
+                tanto como de mi capacidad en el uso de Django.</p>,
             "portfolio": <p>Este sitio web del portafolio fue construido utilizando React, Sass, y Typescript. 
-                El estado fue manejado con los hooks de useContext y useState, permitiendo características como 
-                el cambio del idioma sin recargar la página. Las transiciones del sitio se hicieron con Animate.css, framer-motion, y react-awesome-reveal.</p>,
+                El estado fue manejado con los hooks de useContext y useState, los cuales facilitan características como 
+                el cambio del idioma sin recargar la página. Las transiciones de la página se hicieron con Animate.css, framer-motion, y react-awesome-reveal.</p>,
         },
         "chs": {
             "dengue": <p>[ Translation in progress ]</p>,

@@ -47,7 +47,7 @@ const Banner: React.FunctionComponent = () => {
           </motion.h1>
           <motion.h2 className="Title2 es" initial={{opacity:0, y: -25}} animate={coverFinal} transition={{...trans, delay: d+0.5}} >
             Soy un desarrollador profesional con habilidades en <span>inteligencia artificial, desarrollo web, </span> 
-            e <span>investigación cientifica</span>
+            e <span>investigación científica</span>
           </motion.h2>
           </Fade>
         </div>

@@ -33,13 +33,13 @@ const CBlock: React.FunctionComponent = () => {
               No tengo miedo de usar <span>C</span> cuando el rendimiento es crucial.
             </p>
             <p>
-              También he experimentado con una variedad de lenguajes como <span>Clojure</span>, 
+              También he experimentado con una variedad de lenguajes tal como <span>Clojure</span>, 
               <span> Haskell</span>, <span>Julia</span>, y <span>Go</span>. 
               Estoy dispuesto a aprender nueva tecnología 
-              si es adecuado para el proyecto.
+              si es adecuada para el proyecto.
             </p>
             <p>
-              Estoy disponible para asistirle.
+              ¡Adelante! Estoy disponible para asistirle.
             </p>
             </Fade>
           </div>

@@ -13,6 +13,21 @@ const Resume: React.FunctionComponent = () => {
     const Context = useContext(StoreContext);
     const [lang, setLang] = Context.lang;
 
+    const initial = {
+        opacity: 0,
+        y: 15,
+    }
+
+    const final = {
+        opacity: 1,
+        y: 0,
+    }
+
+    const trans = {
+        duration: 1,
+        delay: 1,
+    }
+
     return(
         <div>
         {(lang==="english") && (
@@ -20,7 +35,7 @@ const Resume: React.FunctionComponent = () => {
                 <div className="content">
                     <h1>Resume</h1>
                 </div>
-                <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
+                <motion.div className="img-container" initial={initial} animate={final} transition={trans}>
                     <img src={resume} alt="resume-image"/>
                 </motion.div>
 
@@ -38,7 +53,7 @@ const Resume: React.FunctionComponent = () => {
                 <div className="content">
                     <h1>Currículum</h1>
                 </div>
-                <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
+                <motion.div className="img-container" initial={initial} animate={final} transition={trans}>
                     <img src={resume_es} alt="resume-image"/>
                 </motion.div>
 
@@ -56,7 +71,7 @@ const Resume: React.FunctionComponent = () => {
                 <div className="content">
                     <h1>簡歷</h1>
                 </div>
-                <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
+                <motion.div className="img-container" initial={initial} animate={final} transition={trans}>
                     <img src={resume_cht} alt="resume-image"/>
                 </motion.div>
 
@@ -74,7 +89,7 @@ const Resume: React.FunctionComponent = () => {
                 <div className="content">
                     <h1>简历</h1>
                 </div>
-                <motion.div className="img-container" initial={{opacity: 0, y: 15}} animate={{opacity:1, y: 0}} transition={{duration: 1}}>
+                <motion.div className="img-container" initial={initial} animate={final} transition={trans}>
 
                     <img src={resume_chs} alt="resume-image"/>
                 </motion.div>

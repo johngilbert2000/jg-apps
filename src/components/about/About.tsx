@@ -21,12 +21,12 @@ const About: React.FunctionComponent = () => {
         type: "spring",
         duration: 0.5,
         stiffness: 50,
-        delay: 0.6,
+        delay: 0.7, // 0.6
     }
     const trans2 = {
         type: "spring",
         duration: 2,
-        delay: 0.9,
+        delay: 1.1, // 0.9
         stiffness: 20,
     }
     const contentInitial = {
@@ -38,12 +38,12 @@ const About: React.FunctionComponent = () => {
     }
     const imgFinal = {
         x: 0,
-        opacity: 1
+        opacity: 1,
     }
     const imgTrans = {
         type: "tween",
         duration: 0.1,
-        delay: 0,
+        delay: 1.4,
     }
     const hover = {
         // scale: 1.01
@@ -74,16 +74,16 @@ const About: React.FunctionComponent = () => {
                 <div className="content-container">
                     <motion.div className="content" initial={contentInitial} animate={final} exit={contentInitial} transition={{duration: 0.1}} >
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans} whileHover={hover}>
-                            Hola, me llamo <span>John Gilbert</span>, y soy apasionado por la ciencia y tecnología. 
+                            Hola, me llamo <span>John Gilbert</span>, y soy apasionado por la ciencia y la tecnología. 
                             Mis intereses incluyen la <span>inteligencia artificial</span> y <span>sistemas distribuidos</span>. 
-                            Me encanta viajar también, y hablo fluido <span>ingles</span>, <span>español</span>, y <span>chino</span>. 
+                            Me encanta viajar también, y hablo <span>ingles</span>, <span>español</span>, y <span>chino</span> con fluidez. 
                             Siempre estoy aprendiendo nuevas habilidades.
                         </motion.p>
                         <motion.p initial={initial} animate={final} exit={initial} transition={trans2} whileHover={hover}>
-                            Antes de desarrollar software, tabajé como un <span>químico</span> en 
-                            laboratorios <span>analiticos</span> y de <span>investigación organicos</span>, 
+                            Antes de desarrollar software, tabajé como <span>químico</span> en 
+                            laboratorios <span>analíticos</span> y de <span>investigación organica</span>, 
                             y también en la industria farmacéutica. 
-                            Con un firme <span>conocimiento de la ciencia</span>, el rigor cientifico y la experimentación 
+                            Con un firme <span>conocimiento de la ciencia</span>, el rigor científico y la experimentación 
                             son cualidades de mi trabajo.
                         </motion.p>
                     </motion.div>
