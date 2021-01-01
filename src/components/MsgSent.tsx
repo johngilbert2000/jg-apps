@@ -48,7 +48,6 @@ const MsgSent: React.FunctionComponent = () => {
             </div>
         </div>
       )}
-
     </div>
     );
 }

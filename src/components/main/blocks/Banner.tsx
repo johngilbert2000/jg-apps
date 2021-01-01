@@ -8,7 +8,7 @@ const Banner: React.FunctionComponent = () => {
   const Context = useContext(StoreContext);
   const [lang, setLang] = Context.lang;
 
-  const d = 0.5; // delay 1.7 0.7
+  const d = 0.5;
 
   const coverInit = {
     opacity: 0,

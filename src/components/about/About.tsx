@@ -21,12 +21,12 @@ const About: React.FunctionComponent = () => {
         type: "spring",
         duration: 0.5,
         stiffness: 50,
-        delay: 0.7, // 0.6
+        delay: 0.7,
     }
     const trans2 = {
         type: "spring",
         duration: 2,
-        delay: 1.1, // 0.9
+        delay: 1.1,
         stiffness: 20,
     }
     const contentInitial = {

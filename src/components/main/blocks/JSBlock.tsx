@@ -1,6 +1,5 @@
 import React, { useContext } from 'react';
 import {motion} from 'framer-motion';
-// import Fade from 'react-reveal/Fade';
 import { Fade } from "react-awesome-reveal";
 import { StoreContext } from '../../storeContext';
 
@@ -9,7 +8,6 @@ const JSBlock: React.FunctionComponent = () => {
   const [lang, setLang] = Context.lang;
 
   const coverInit = {
-    // opacity: 0.5,
     y: -400
   }
   const coverFinal = {
@@ -34,7 +32,6 @@ const JSBlock: React.FunctionComponent = () => {
                 and can adapt my programming style to meet your company’s needs.
               </p>
               <span className="lighter"> <i className="fab fa-react fa-2x"></i></span>
-              {/* <span className="lighter"> <i className="fab fa-node-js fa-2x"></i></span> */}
               <p>
                 I have done projects in the frontend with <span>React</span>, 
                 and in the backend with <span>Django</span>.

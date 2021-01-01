@@ -3,12 +3,12 @@ import {motion, useAnimation} from 'framer-motion';
 
 import bg_dengue from '../../images/dengue_scr.png';
 import bg_nested from '../../images/nestedlookahead_scr.png';
-import bg_sentiment from '../../images/sentiment140_scr.png'; // default
+import bg_sentiment from '../../images/sentiment140_scr.png';
 import bg_bio from '../../images/bio_scr.png';
 import bg_quantum from '../../images/phase_scr.png';
 import bg_kde from '../../images/code_shot2.png';
 import bg_os from '../../images/os_sched_scr.png';
-import bg_fed from '../../images/sentiment140_scr.png'; // default (no img yet)
+import bg_fed from '../../images/sentiment140_scr.png';
 import bg_web from '../../images/web_scr.png';
 import { url } from 'inspector';
 import { Fade } from 'react-awesome-reveal';
@@ -22,14 +22,11 @@ const Portfolio: React.FunctionComponent = () => {
     const cardInit = {opacity:0, scale:1};
     const cardFinal = {opacity:1, scale:1};
     const trans = {type:"spring", duration: 0.2};
-    // const controls = useAnimation();
 
     const [fade, setFade] = useState(false);
     const [selectedID, setZoom] = useState(0);
 
     const [cardValue, setCardValue] = useState("");
-    // let fade: boolean = false;
-
 
     const cardNames: string[] = [
         "Dengue Prediction",
@@ -259,7 +256,6 @@ const Portfolio: React.FunctionComponent = () => {
                     ) || (lang==="spanish") && (
                         <div>
                             <button className="btn">Ver en Github</button>
-                            {/* <i className="fas fa-code-branch"></i> */}
                         </div>
                     ) || (lang==="chinese_traditional") && (
                         <div>
@@ -289,15 +285,11 @@ const Portfolio: React.FunctionComponent = () => {
 
 
     const expandCard = (idx: number) => {
-        // console.log(selectedID);
-        // const card = document.querySelector('.card');        
         const card = document.getElementById(`${idx}`);
 
         if (selectedID !== idx) {
-            // console.log('zoom in', idx, selectedID);
             card?.classList.toggle('card-zoomin');
             setTimeout(() => { card?.classList.toggle('card-zoomin') }, 200);
-            // selectedID = idx;
             switch(lang) {
                 case "english": setCardValue((cardDesc as any).en[descID[idx]]); break;
                 case "spanish": setCardValue((cardDesc as any).es[descID[idx]]); break;
@@ -305,40 +297,18 @@ const Portfolio: React.FunctionComponent = () => {
                 case "chinese_simplified": setCardValue((cardDesc as any).chs[descID[idx]]); break;
                 default: setCardValue((cardDesc as any).en[descID[idx]]);
             }
-            // setCardValue(cardNames[idx]);
         }
         setTimeout(() => { card?.classList.toggle('card-active') }, 200);
 
-        // card?.classList.toggle('card-active');
         if (selectedID === idx) {
-            // setTimeout(() => {
-            //     console.log('zoomout');
-            //     card?.classList.toggle('card-zoomout');
-            //     setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200); // 200
-            // }, 300);
-            // console.log('zoom out');
             card?.classList.toggle('card-zoomout');
-            setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200); // 200
+            setTimeout(() => { card?.classList.toggle('card-zoomout') }, 200);
         }
-        // selectedID = idx;
 
         setFade(!fade);
         setZoom(idx);
-        // fade = !fade;
-        // setTimeout(() => setFade(!fade), 200);
-
-        // console.log(card);
     }
 
-    const cardClicked = (idx: number) => {
-        // let mut: any = (document.getElementById(`${idx}`));
-        // console.log(idx, mut);
-        // mut.style.transform = "rotate(20deg)";
-        console.log(idx);
-        // const document.getElementById(idx)?.style.transform = "rotate(20deg)";
-        return ({});
-    }
-// (event, info)=> {console.log(info.point.x, info.point.y, event);}
     return(
         <div>
             <div className="portfolio">
@@ -403,29 +373,6 @@ const Portfolio: React.FunctionComponent = () => {
                                 </div>
                             )}
                             {(selectedID === 0) ? gitButt.noButton : gitButt.button}
-
-                            {/* <div className="btn-wrapper">
-                                <a href="https://github.com/johngilbert2000" target="_blank">
-                                    {(lang==="english") && (
-                                       <div>
-                                            <button className="btn">View on Github</button>
-                                        </div>
-                                    ) || (lang==="spanish") && (
-                                       <div>
-                                            <button className="btn">Ver en Github</button>
-                                        </div>
-                                    ) || (lang==="chinese_traditional") && (
-                                       <div>
-                                            <button className="btn">在 Github 看</button>
-                                        </div>
-                                    ) || (lang==="chinese_simplified") && (
-                                       <div>
-                                            <button className="btn">在 Github 看</button>
-                                        </div>
-                                    )} 
-                                </a>
-                            </div> */}
-                            {/* <i className="fas fa-code-branch"></i> */}
                         </motion.div>
                     )}
                     { fade && (
@@ -446,7 +393,6 @@ const Portfolio: React.FunctionComponent = () => {
                     )}
                 </div>
             </div>
-
         </div>
     );
 }

@@ -4,13 +4,8 @@ import { Fade, Bounce, Slide } from 'react-awesome-reveal';
 import {motion} from 'framer-motion';
 import { StoreContext } from './storeContext';
 
-// interface Props {
-//     name: string;
-// }
-
 const NavMenu: React.FunctionComponent = () => {
 
-    // const [lang, setLang] = useState("english");
     const Context = useContext(StoreContext);
     const [lang, setLang] = Context.lang;
 
@@ -39,11 +34,7 @@ const NavMenu: React.FunctionComponent = () => {
 
       menuStyle = {"opacity": (checked ? 1 : 0)};
       const menu = document.querySelector('.menu');
-      // console.log(menu?.classList);
-      // menu?.toggleAttribute('menu-active')
       menu?.classList.toggle('menu-active');
-  
-      // console.log(checked, menuStyle);
     }
   
   
@@ -52,7 +43,6 @@ const NavMenu: React.FunctionComponent = () => {
       const nav = document.querySelector('Navbar');
   
       burger?.addEventListener('click', () => {
-        // nav?.classList.toggle('nav-active');
       });
     }
 
@@ -61,11 +51,9 @@ const NavMenu: React.FunctionComponent = () => {
     const trans = {type:"spring", duration: 3};
     const s = 0; // start
 
-    const selectedStyle = {background: 'rgb(50,55,65)', color: '#eee'}; // 40 55 65 // 10 20 30 // 60 65 75
+    const selectedStyle = {background: 'rgb(50,55,65)', color: '#eee'};
     const unselectedStyle = {background: '', color: ''};
 
-
-    // let langOpen: boolean = false;
     let langActive: boolean = false;
 
     const [langOpen, setLangOpen] = useState(false);
@@ -80,7 +68,6 @@ const NavMenu: React.FunctionComponent = () => {
         setTimeout(() => {langmenu?.classList.toggle('opts-inactive')}, 400);
       }
       setLangOpen(!langOpen);
-      // langOpen = !langOpen;
     }
     const langSelectOpen = () => {
       if (!langOpen && !langActive) {
@@ -158,8 +145,6 @@ const NavMenu: React.FunctionComponent = () => {
 
             <button className="selection2" onClick={langSelect} 
             style={langOpen ? {background: 'rgb(80,80,80)'} : {background: ''}}>
-            {/* // onMouseEnter={langSelectOpen}
-            // onMouseLeave={langSelectClose}> */}
               <div>
                 <i className="fas fa-globe"></i> 
                 {(() => {
@@ -252,8 +237,6 @@ const NavMenu: React.FunctionComponent = () => {
             </div>
             
             <div className="opts opts-inactive">
-            {/* <Slide direction={'down'} damping={0.1} delay={1} duration={500}> */}
-              {/* <Bounce > */}
               <div style={lang === "english" ? selectedStyle : unselectedStyle} 
               onClick={() => {setLang("english"); setTimeout(() => langSelect(), 270);}}>English</div>
 
@@ -265,12 +248,8 @@ const NavMenu: React.FunctionComponent = () => {
 
               <div style={lang === "chinese_simplified" ? selectedStyle : unselectedStyle}
                onClick={() => {setLang("chinese_simplified"); setTimeout(() => langSelect(), 270);}}>简体中文</div>
-               {/* </Bounce> */}
-               {/* </Slide> */}
             </div>
           </div>
-
-
     );
 }
 
