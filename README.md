@@ -11,6 +11,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 In the project directory, you can run:
 
+### `sass --watch src/App.scss public/styles.css --style compressed`
+
+Compiles Sass code to CSS. See the [Sass Docs](https://sass-lang.com/guide) for more information.
+
 ### `npm start`
 
 Runs the app in the development mode.<br />

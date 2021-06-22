@@ -138,8 +138,9 @@ body, input[type="text"], input[type="email"], textarea {
   letter-spacing: 1px;
   font-variant: small-caps;
   font-size: 18px;
-  transition: opacity 1s ease-in-out;
+  transition: opacity 0.1s ease-in-out;
   transition: height 1s ease-in-out;
+  overflow: hidden;
 
   z-index: 90;
 
@@ -239,12 +240,14 @@ body, input[type="text"], input[type="email"], textarea {
       width: 5px;
       margin-left: 4px;
       margin-top: 20px;
+      overflow: hidden;
     }
     
     & + .burger .line2 {
       transform: rotate(260deg);
       margin: -14px;
       opacity: 0;
+      overflow: hidden;
     }
 
     & + .burger .line3 {
@@ -254,6 +257,7 @@ body, input[type="text"], input[type="email"], textarea {
       margin-right: 20px;
       margin-top: 16px;
       margin-left: 14px;
+      overflow: hidden;
     }
   }
 
@@ -264,6 +268,7 @@ body, input[type="text"], input[type="email"], textarea {
     height: 60px;
     display: block;
     overflow: scroll;
+    overflow: hidden;
   }
 
   .burger div {
@@ -399,7 +404,7 @@ body, input[type="text"], input[type="email"], textarea {
 .selection select option {
   padding: 5px 0px;
   font-variant: small-caps;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .selection2 {
@@ -459,9 +464,9 @@ body, input[type="text"], input[type="email"], textarea {
   transition: all 0.2s ease-in-out;
   transform: translate(0, -50px);
   font-variant: small-caps;
+  font-size: 1rem;
 
   div {
-
     animation: backInDown;
     animation-duration: 0.3s;
     cursor: pointer;
@@ -470,6 +475,7 @@ body, input[type="text"], input[type="email"], textarea {
     padding: 5px 10px;
     border-radius: 5px;
     transition: all 0.2s ease;
+    overflow-x: hidden;
     &:hover {
       background: rgb(40, 46, 65);
       color: $light2;
@@ -1132,6 +1138,7 @@ body, input[type="text"], input[type="email"], textarea {
     align-items: center;
     display: flex;
     padding-top: 10%;
+    max-width: 30em;
 
     .content {
       box-shadow: -1px -1px 5px #aaa;
@@ -1308,6 +1315,8 @@ body, input[type="text"], input[type="email"], textarea {
       overflow: hidden;
       cursor: pointer;
       box-shadow: 0px 0px 2px $dark;
+      font-size: 1rem;
+
 
       &:hover {
         box-shadow: 0px 0px 15px $dark;
@@ -1446,7 +1455,7 @@ body, input[type="text"], input[type="email"], textarea {
     }
 
     @media screen and (max-width: $media-size) {
-      font-size: 12px;
+      // font-size: 12px;
       grid-template-columns: 1fr;
       padding-left: 0;
 
